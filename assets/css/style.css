@@ -1,5 +1,6 @@
 .card {
   position: relative;
+  min-width: 300px !important;
   max-width: 350px !important;
   height: 346px !important;
   display: -webkit-box;
@@ -25,13 +26,20 @@
   position: absolute;
   top: 0;
   left: 0;
-  max-height: 173px;
-  background: -webkit-gradient(linear, left top, right top, from(#56CCF2), to(#2F80ED));
-  background: linear-gradient(to right, #56CCF2 0%, #2F80ED 100%);
+  height: 173px;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
 }
 
 .card .card-title {
-  margin-top: 173px;
+  margin: 173px 0 10px;
+  font-size: 1.2rem;
+}
+
+.card .card-description {
+  font-size: .85rem;
+  line-height: 140%;
+  color: #374A59;
 }
 
 .card .card-links {
@@ -49,7 +57,7 @@
 .card .card-links .card-link {
   position: relative;
   font-weight: 600;
-  font-size: 11px;
+  font-size: .7rem;
   line-height: 15px;
   color: #007AE9;
 }
@@ -61,7 +69,7 @@
   left: 0;
   bottom: -2px;
   width: 0%;
-  height: 1px;
+  height: 2px;
   background: #42A6EF;
   -webkit-transition: .7s ease;
   transition: .7s ease;
@@ -69,6 +77,36 @@
 
 .card .card-links .card-link:hover::before {
   width: 100%;
+}
+
+@-webkit-keyframes vejamais {
+  0% {
+    -webkit-transform: translate3d(0, -30%, 0);
+            transform: translate3d(0, -30%, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 0, 0) scale(1.1);
+            transform: translate3d(0, 0, 0) scale(1.1);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -30%, 0);
+            transform: translate3d(0, -30%, 0);
+  }
+}
+
+@keyframes vejamais {
+  0% {
+    -webkit-transform: translate3d(0, -30%, 0);
+            transform: translate3d(0, -30%, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, 0, 0) scale(1.1);
+            transform: translate3d(0, 0, 0) scale(1.1);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -30%, 0);
+            transform: translate3d(0, -30%, 0);
+  }
 }
 
 * {
@@ -108,8 +146,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -159,7 +197,6 @@ header .div-header .nav-list .nav-link {
   padding: 8px 16px;
   color: #42A6EF;
   font-size: 20px;
-  font-weight: bold;
   margin-left: 35px;
   z-index: 1;
   letter-spacing: 4px;
@@ -173,7 +210,7 @@ header .div-header .nav-list .nav-link::before {
   left: 0;
   bottom: -5px;
   width: 0%;
-  height: 5px;
+  height: 4px;
   background: #42A6EF;
   -webkit-transition: .7s ease;
   transition: .7s ease;
@@ -214,6 +251,10 @@ main .container .hero {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+main .container .hero .content {
+  padding-left: 36px;
 }
 
 main .container .hero .content .hero-title {
@@ -267,30 +308,31 @@ main .container .hero .nav-hero {
           justify-content: space-between;
 }
 
+main .container .hero .nav-hero p {
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: #f2f2f2;
+  opacity: 0.9;
+}
+
 main .container .hero .nav-hero .veja-mais {
   position: relative;
   color: #f2f2f2;
-}
-
-main .container .hero .nav-hero .veja-mais::after, main .container .hero .nav-hero .veja-mais::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 15%;
-  width: 35%;
-  height: 2px;
-  background: -webkit-gradient(linear, left top, right top, from(#42A6EF), to(transparent));
-  background: linear-gradient(to right, #42A6EF, transparent);
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
+  -webkit-animation: vejamais 2s ease-in-out infinite both;
+          animation: vejamais 2s ease-in-out infinite both;
 }
 
 main .container .hero .nav-hero .veja-mais::before {
-  left: 15%;
-  background: -webkit-gradient(linear, right top, left top, from(#42A6EF), to(transparent));
-  background: linear-gradient(to left, #42A6EF, transparent);
-  -webkit-transform: rotate(15deg);
-          transform: rotate(15deg);
+  content: '';
+  position: absolute;
+  bottom: -75%;
+  right: 5%;
+  width: 90%;
+  height: 30px;
+  background: url("../img/arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 main .container .hero .nav-hero .social-media {
@@ -340,12 +382,16 @@ main .container .portfolio .content h1 {
   margin-bottom: 10px;
 }
 
-main .container .portfolio .content div {
+main .container .portfolio .content .front-end-projects, main .container .portfolio .content .node-projects {
   width: 100%;
 }
 
-main .container .portfolio .content div .card {
-  margin: 0 8px 20px;
+main .container .portfolio .content .front-end-projects .slick-track, main .container .portfolio .content .node-projects .slick-track {
+  width: 100%;
+}
+
+main .container .portfolio .content .front-end-projects .card, main .container .portfolio .content .node-projects .card {
+  margin: 20px 8px 20px;
 }
 
 main .container .skills {
