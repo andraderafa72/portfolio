@@ -1,9 +1,302 @@
+@import './partials/colors';
+@import './partials/cards';
+
 *{ 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins';
 }
 
 a{
   text-decoration: none;
+  opacity: 0.9;
+  transition: .7s ease;
+  &:hover{opacity: 1;}
+}
+
+ul{
+  list-style-type: none;
+}
+
+body, html{overflow-x: hidden;}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background: $black-gradient;
+}
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgb(41, 37, 37); 
+}
+
+::-webkit-scrollbar-track-piece  { 
+  background: rgb(65, 60, 60); 
+}
+
+
+
+header{
+  width: 100%;
+  max-height: 10vh;
+
+  .div-header{
+    padding: 0 8px;
+    max-width: 1440px;
+    height: 10vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo{
+      font-size: 26px;
+      letter-spacing: 4px;
+      color: $white;
+    }
+    .nav-list{
+     display: flex;
+     
+     .nav-link{
+       position: relative;
+       padding: 8px 16px;
+       color: $blue;
+       font-size: 20px;
+       font-weight: bold;
+       margin-left: 35px;
+       z-index: 1;
+       letter-spacing: 4px;
+       text-transform: uppercase;
+
+       &::before{
+         content: '';
+         z-index: 4;
+         position: absolute;
+         left: 0;
+         bottom: -5px;
+         width: 0%;
+         height: 5px;
+         background: $blue;
+         transition: .7s ease;
+       }
+
+       &:hover{
+         color: $blue-light;
+
+         &::before{width: 100%;}
+       }
+     }
+    }
+  }
+}
+
+main{
+  .container{
+    margin: 0 auto;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+
+    .hero{
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      max-height: 1080px;
+      display: flex;
+      align-items: center;
+      padding-top: 120px;
+      justify-content: flex-start;
+      
+      .content{
+        .hero-title{
+          max-width: 816px;
+          font-weight: bold;
+          font-size: 66px;
+          letter-spacing: 4px;
+          color: $white;
+          margin-bottom: 16px;
+          
+          span{
+            color: $blue;
+          }
+        }
+
+        .hero-subtitle{
+          color: $white-dark;
+          font-weight: bold;
+          font-size: 22px;
+          letter-spacing: 4px;
+          opacity: 0.6;
+          margin: -15px 0 48px;
+        }
+        
+        .hero-button{
+          display: inline-block;
+          padding: 12px 55px;
+          color: $white;
+          letter-spacing: 4px;
+          background: $blue-gradient;
+          transform: skewX(-10deg);
+
+          &:hover{
+            transform: skewX(-15deg) scale(1.05);
+          }
+        }
+
+      }
+      .nav-hero{
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+
+        .veja-mais{
+          position: relative;
+          color: $white;
+
+          &::after, &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 15%;
+            width: 35%;
+            height: 2px;
+            background: linear-gradient(to right, $blue, transparent);
+            transform: rotate(-15deg);
+          }
+          &::before{
+            left: 15%;
+            background: linear-gradient(to left, $blue, transparent);
+            transform: rotate(15deg);
+          }
+        }
+
+        .social-media{
+          display: flex;
+          li{ 
+            margin-left: 24px;
+            a{
+              width: 32px;
+              height: 32px;
+              border-radius: 100%;
+              background-color: #000;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+
+    .portfolio{
+      max-height: 1080px;
+      padding-top: 50px;
+      
+      .portfolio-title{
+        margin-bottom:50px;
+        font-weight: bold;
+        font-size: 60px;
+        line-height: 170%;
+        letter-spacing: 2px;
+        color: $white;
+      }
+      .content{
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // flex-wrap: nowrap;
+        // align-items: center;
+
+        h1{
+          width: 100%;
+          text-align: left;
+          color: $white;
+          margin-bottom: 10px;
+        }
+
+        div{
+          width: 100%;
+          
+          .card{
+            margin: 0 8px 20px;
+          }
+        }
+        
+      }
+    }
+
+    .skills{
+      padding-top: 50px;
+
+      .content{
+        margin-bottom: 50px;
+        .skills-title{
+          font-weight: bold;
+          font-size: 60px;
+          letter-spacing: 9px;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .container-light{
+
+  }
+}
+
+
+
+@media(max-width: 1369px){
+  header{
+    .div-header{
+      max-width: 1280px; padding: 0 24px;
+
+      .logo{font-size: 24px; letter-spacing: 3px;}
+
+      .nav-list{
+        .nav-link{font-size: 14px; letter-spacing: 3px;}
+      }
+    }
+  }
+
+  main{
+    .container{
+      margin: 0 auto;
+      padding: 0 120px;
+      max-width: 1440px;
+  
+      .hero{
+
+        .content{
+
+          .hero-title{
+          max-width: 700px;
+          font-size: 48px;
+          letter-spacing: 2px;
+          }
+
+          .hero-subtitle{font-size: 18px;}
+
+          .hero-button{
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+  }
+  
 }

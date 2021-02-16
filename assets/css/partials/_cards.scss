@@ -1,0 +1,57 @@
+.card{
+  position: relative;
+  max-width: 350px !important;
+  height: 346px!important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex;
+  justify-content: flex-start;
+  background-color: $white;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 14px;
+
+  .card-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 173px;
+    background: $blue-gradient;
+  } 
+
+  .card-title{
+    margin-top: 173px;
+  }
+
+  .card-links{
+    position: absolute;
+    bottom: 24px;
+    width: calc(100% - 48px)!important;
+    display: flex;
+    justify-content: space-between;
+    
+    .card-link{
+      position: relative;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 15px;
+      color: #007AE9;
+
+      &::before{
+        content: '';
+        z-index: 4;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 0%;
+        height: 1px;
+        background: $blue;
+        transition: .7s ease;
+      }
+
+      &:hover{
+        &::before{width: 100%;}
+      }
+    }
+  }
+}
