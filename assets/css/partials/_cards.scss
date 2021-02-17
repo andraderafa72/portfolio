@@ -1,7 +1,7 @@
 .card{
   position: relative;
-  min-width: 300px !important;
-  max-width: 350px !important;
+  min-width: 25rem;
+  max-width: 28rem;
   height: 346px!important;
   display: flex;
   flex-direction: column;
@@ -10,13 +10,19 @@
   background-color: $white;
   border-radius: 16px;
   padding: 24px;
-  margin-top: 14px;
+  margin: 10px 40px; 
 
+  &:hover{
+    transform: scale(1.01);
+    transition: .2s ease;
+  }
+
+  &:focus{outline: none;}
   .card-image{
     position: absolute;
     top: 0;
     left: 0;
-    height: 173px;
+    height:173px;
     width: 100%;
     border-radius: 16px 16px 0 0;
   } 
@@ -62,5 +68,26 @@
         &::before{width: 100%;}
       }
     }
+  }
+}
+
+.slick-dots li{
+  button::before{
+    color: $white!important;
+    fill: $white!important;
+    stroke: $white!important;
+  }
+}
+
+@media(max-width:1369px){
+  .card{
+    min-width: 10rem;
+    margin: 20px 8px;
+  }
+}
+@media(max-width:1024px){
+  .card{
+    min-width: 10rem;
+    margin: 20px 40px;
   }
 }

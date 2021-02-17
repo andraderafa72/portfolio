@@ -117,11 +117,11 @@ main{
       justify-content: flex-start;
       
       .content{
-        padding-left: 36px;
         .hero-title{
+          padding-left: 36px;
           max-width: 816px;
           font-weight: bold;
-          font-size: 66px;
+          font-size: 3.5rem;
           letter-spacing: 4px;
           color: $white;
           margin-bottom: 16px;
@@ -132,6 +132,7 @@ main{
         }
 
         .hero-subtitle{
+          padding-left: 36px;
           color: $white-dark;
           font-weight: bold;
           font-size: 22px;
@@ -141,6 +142,7 @@ main{
         }
         
         .hero-button{
+          margin-left: 36px;
           display: inline-block;
           padding: 12px 55px;
           color: $white;
@@ -159,12 +161,11 @@ main{
         bottom: 10px;
         left: 0;
         width: 100%;
-
         display: flex;
         justify-content: space-between;
 
         p{
-          font-size: 18px;
+          font-size: 1rem;
           line-height: 20px;
           letter-spacing: 2px;
           color: $white;
@@ -172,6 +173,7 @@ main{
         }
 
         .veja-mais{
+          font-size: 1rem;
           position: relative;
           color: $white;
           animation: vejamais 2s ease-in-out infinite both;
@@ -238,9 +240,6 @@ main{
 
           .slick-track{width: 100%;}
           
-          .card{
-            margin: 20px 8px 20px;
-          }
         }
         
       }
@@ -282,13 +281,46 @@ main{
       max-width: 1440px;
   
       .hero{
-
+        padding-top: 80px;
         .content{
 
           .hero-title{
           max-width: 700px;
-          font-size: 48px;
+          font-size: 2.5rem;
           letter-spacing: 2px;
+          }
+
+          .hero-subtitle{font-size: 18px;}
+
+          .hero-button{
+            letter-spacing: 2px;
+          }
+
+          
+        }
+        .nav-hero{
+          padding: 0px 24px;
+        }
+      }
+    }
+  }
+  
+}
+
+@media(max-width: 1024px){
+  main{
+    .container{
+      margin: 0 auto;
+      padding: 0 30px;
+  
+      .hero{
+
+        .content{
+
+          .hero-title{
+            max-width: 700px;
+            font-size: 2rem;
+            letter-spacing: 2px;
           }
 
           .hero-subtitle{font-size: 18px;}
@@ -300,5 +332,4 @@ main{
       }
     }
   }
-  
 }
