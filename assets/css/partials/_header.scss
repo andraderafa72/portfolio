@@ -51,11 +51,50 @@ header{
   }
 }
 
+@media(max-width: 1369px){
+  header{
+    .div-header{
+      max-width: 1280px; padding: 0 24px;
+
+      .logo{font-size: 24px; letter-spacing: 3px;}
+
+      .nav-list{
+        .nav-link{font-size: 14px; letter-spacing: 3px;}
+      }
+    }
+  }
+}
+
+@media(max-width:1024px){
+  header{
+    .div-header{
+      .nav-list{
+        .nav-link{
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+@media(max-width:992px){
+  header{
+    .div-header{
+
+      .logo{font-size: 1.05rem!important;}
+
+      .nav-list{
+        .nav-link{
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}
 @media(max-width:768px){
   header{
     .div-header{
       .logo{
-        font-size: 1.1rem!important;
+        font-size: 1.2rem!important;
       }
       .nav-list{display: none;}
     }
