@@ -44,60 +44,9 @@ body{
   background: rgb(65, 60, 60); 
 }
 
+@import './partials/burguer';
+@import './partials/header';
 
-
-header{
-  width: 100%;
-  max-height: 10vh;
-
-  .div-header{
-    padding: 0 8px;
-    max-width: 1440px;
-    height: 10vh;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .logo{
-      font-size: 26px;
-      letter-spacing: 4px;
-      color: $white;
-    }
-    .nav-list{
-     display: flex;
-     
-     .nav-link{
-       position: relative;
-       padding: 8px 16px;
-       color: $blue;
-       font-size: 20px;
-       margin-left: 35px;
-       z-index: 1;
-       letter-spacing: 4px;
-       text-transform: uppercase;
-
-       &::before{
-         content: '';
-         z-index: 4;
-         position: absolute;
-         left: 0;
-         bottom: -5px;
-         width: 0%;
-         height: 4px;
-         background: $blue;
-         transition: .7s ease;
-       }
-
-       &:hover{
-         color: $blue-light;
-
-         &::before{width: 100%;}
-       }
-     }
-    }
-  }
-}
 
 main{
   .container{

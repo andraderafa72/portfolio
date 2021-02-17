@@ -1,4 +1,4 @@
-  $('.front-end-projects').slick({
+$('.front-end-projects').slick({
     dots: true,
     infinite: true,
     arrows: true,
@@ -54,3 +54,13 @@
       }
     ]
   });
+
+  $('.burguer-menu').click(function(){
+    $('.hamburguer-menu').toggleClass('open');
+    $('.burguer-menu').toggleClass('open');
+  });
+  $('.h-link').click(function(){
+    $('.hamburguer-menu').removeClass('open');
+    $('.burguer-menu').removeClass('open');
+  });
+  
