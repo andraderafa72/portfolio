@@ -33,7 +33,7 @@ main{
         .hero-subtitle{
           padding-left: 36px;
           color: $white-dark;
-          font-weight: bold;
+          font-weight: 400;
           font-size: 22px;
           letter-spacing: 4px;
           opacity: 0.6;
@@ -50,7 +50,7 @@ main{
           transform: skewX(-10deg);
 
           &:hover{
-            transform: skewX(-15deg) scale(1.05);
+            transform: skewX(-15deg) scale(1.04);
           }
         }
 
@@ -93,7 +93,7 @@ main{
         .social-media{
           display: flex;
           li{ 
-            margin-left: 24px;
+            margin-left: 16px;
             a{
               width: 32px;
               height: 32px;
@@ -109,7 +109,6 @@ main{
     }
 
     .portfolio{
-      max-height: 1080px;
       padding-top: 50px;
       
       .portfolio-title{
@@ -127,22 +126,129 @@ main{
         // flex-wrap: nowrap;
         // align-items: center;
 
-        h1{
+        .front-end-toggle{          
+          border-bottom: 2px solid rgba(66, 166, 239, .6);
+          &.toggled{
+            border-bottom: 2px solid $blue-light;
+          }
+        }
+        .node-toggle{
+          border-bottom: 2px solid rgba(0, 233, 97, .6);
+          &.toggled{
+            border-bottom: 2px solid $green-light;
+          }
+        }
+        .front-end-toggle, .node-toggle{
           width: 100%;
+          padding: 12px 0;
           text-align: left;
           color: $white;
           margin-bottom: 10px;
+          font-size: 1.5rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;          
+
+          span{            
+            transition: .4s ease;
+            
+            &.open{
+              transform: rotate(180deg);
+            }
+          }
+          
         }
 
         .front-end-projects, .node-projects{
           width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          padding: 22px 36px 44px;
+          transition: .7s ease;
 
-          .slick-track{width: 100%;}
+          &.closed{
+            & *{
+              display: none;
+            }
+          }
+          .project{
+            margin: 18px 0;
+            background-color: $black;
+            width: 100%;
+            max-width: 1440px;
+            max-height: 500px;
+            display: flex;
+            box-shadow: 0px 4px 18px 0px $black-light;
+
+            img{
+              width: 50%;
+  
+            }
+
+            .project-info{
+              position: relative;
+              padding: 44px;
+
+              .project-title{
+                font-family: 'Poppins';
+                font-size: 2rem;
+                color: $white;
+                font-weight: 400;
+              }
+              
+              .project-description{
+                margin-top: 24px;
+                font-family: 'Poppins';
+                font-size: 1rem;
+                opacity: .8;
+                font-weight: 400;
+                color: $white;
+                letter-spacing: 2px;
+                text-align: justify;
+              }
+
+              .buttons{
+                position: absolute;
+                bottom: 44px;
+                left: 44px;
+                width:85%;
+                display: flex; 
+                justify-content: space-between;
+              }
+
+              .see-on-github,
+              .see-it-working{
+                position: relative;
+                font-family: Open Sans;
+                font-weight: 600;
+                font-size: .9rem;
+                color: $blue-link;
+
+                &::before{
+                  content: '';
+                  position: absolute;
+                  bottom: -5px;
+                  left: 0;
+                  width: 0%;
+                  height: 2px;
+                  background-color: $blue-link;
+                  transition: .7s ease;
+                }
+
+                &:hover{
+                  &::before{width: 100%;}
+                }
+              }
+            }
+
+          } // project
           
-        }
+        } // front-end-projects, node-projects
         
-      }
-    }
+      } // content 
+    } // portfolio
 
     .skills{
       padding-top: 50px;
@@ -177,7 +283,7 @@ main{
           letter-spacing: 2px;
           }
 
-          .hero-subtitle{font-size: 18px;}
+          .hero-subtitle{font-size: 16px;}
 
           .hero-button{
             letter-spacing: 2px;
@@ -230,6 +336,7 @@ main{
 }
 
 @media(max-width: 768px){
+  .portfolio{max-height: 1350px!important;}
   .nav-hero{height: 30px; justify-content: center;}
   .veja-mais{
     width: 100%; text-align: center;
@@ -248,4 +355,8 @@ main{
   }
   .social-media{display: none!important; }
   .nav-hero p {display: none!important;}
+}
+
+@media(max-width:500px){
+  .slick-track{display: flex!important; justify-content: center!important;}
 }

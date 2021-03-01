@@ -21,11 +21,11 @@
       <li class="nav-item"><a href="#portfolio" class="h-link">Portfólio</a></li>
       <li class="nav-item"><a href="" class="h-link">Contato</a></li>
     </ul>
-    <ul class="social-media">
+    <ul class="social-media-header">
       <li><a href="https://wa.me/5584988181526"><img src="./assets/img/instagram.svg" alt=""></a></li>
-      <li><a href="https://wa.me/5584988181526"><img src="./assets/img/instagram.svg" alt=""></a></li>
-      <li><a href="https://wa.me/5584988181526"><img src="./assets/img/instagram.svg" alt=""></a></li>
-      <li><a href="https://wa.me/5584988181526"><img src="./assets/img/instagram.svg" alt=""></a></li>
+      <li><a href="https://wa.me/5584988181526"><img src="./assets/img/github.svg" alt=""></a></li>
+      <li><a href="https://wa.me/5584988181526"><img src="./assets/img/LinkedIn.svg" alt=""></a></li>
+      <li><a href="https://wa.me/5584988181526"><img src="./assets/img/message_circle.svg" alt=""></a></li>
     </ul>
     <p>devrafael72@gmail.com</p>
   </div>
@@ -59,12 +59,12 @@
 
           <div class="nav-hero">
             <p>devrafael72@gmail.com</p>
-            <a href="#portfolio" class="veja-mais">Veja mais</a>
+            <!-- <a href="#portfolio" class="veja-mais">Veja mais</a> -->
             <ul class="social-media">
-              <li><a href="https://wa.me/5584988181526"><img src="./assets/img/instagram.svg" alt=""></a></li>
-              <li><a href="https://wa.me/5584988181526"><img src="./assets/img/instagram.svg" alt=""></a></li>
-              <li><a href="https://wa.me/5584988181526"><img src="./assets/img/instagram.svg" alt=""></a></li>
-              <li><a href="https://wa.me/5584988181526"><img src="./assets/img/instagram.svg" alt=""></a></li>
+              <li><a href="https://wa.me/5584988181526" target="_blank" rel=”noreferrer”><img src="./assets/img/instagram.svg" alt=""></a></li>
+              <li><a href="https://wa.me/5584988181526" target="_blank" rel=”noreferrer”><img src="./assets/img/github.svg" alt=""></a></li>
+              <li><a href="https://wa.me/5584988181526" target="_blank" rel=”noreferrer”><img src="./assets/img/LinkedIn.svg" alt=""></a></li>
+              <li><a href="https://wa.me/5584988181526" target="_blank" rel=”noreferrer”><img src="./assets/img/message_circle.svg" alt=""></a></li>
             </ul>
           </div>
         </div>
@@ -73,95 +73,103 @@
           <h1 class="portfolio-title">Portfólio</h1>
           <div class="content">
 
-            <h1>Front-end Projects</h1>
+            <a href="#" class="front-end-toggle">Front-end Projects <span class="arrow-frontend">&#x1F861;</span></a>
             <div class="front-end-projects">
-              <div class="card" id="card">
-                <img src="./assets/img/projects/sm-ui.png" class="card-image" alt=""></img>
-                <h5 class="card-title">SpiderMan - UI Concept</h5>
-                <p class="card-description">UI concept de Spider Man - Miles Morales. Não possui versão para celular (ainda).</p>
-                <div class="card-links">
-                  <a href="https://github.com/andraderafa72/" target="_blank" rel=”noreferrer” class="card-link">Veja no GitHub</a>
-                  <a href="https://andraderafa72.github.io/SpiderMan-Frontend" target="_blank" rel=”noreferrer” class="card-link">Veja Funcionando 🡢</a>
+              <div class="project">
+                <img src="./assets/img/projects/sm-ui.png" alt="">
+                <div class="project-info">
+                  <h2 class="project-title">UI Concept - Spider Man: Miles Morales</h2>
+                  <p class="project-description">Design e projeto feito para desenvolvimento pessoal nas mais modernas tecnologias de desenvolvimento web.</p>
+                  <div class="buttons">
+                    <a href="https://github.com/andraderafa72/SpiderMan-Frontend" class="see-on-github" target="_blank" rel=”noreferrer”>Veja no GitHub</a>
+                    <a href="https://andraderafa72.github.io/SpiderMan-Frontend/" class="see-it-working" target="_blank" rel=”noreferrer”>Veja Funcionando 🡢</a>
+                  </div>
                 </div>
               </div>
-              <div class="card" id="card">
-                <img src="./assets/img/projects/todo-list.png" class="card-image" alt=""></img>
-                <h5 class="card-title">ToDo List</h5>
-                <p class="card-description">Uma maneira simples e prática de gerenciar suas tarefas diárias.</p>
-                <div class="card-links">
-                  <a href="https://github.com/andraderafa72/" target="_blank" rel=”noreferrer” class="card-link">Veja no GitHub</a>
-                  <a href="https://andraderafa72.github.io/todolist" target="_blank" rel=”noreferrer” class="card-link">Veja Funcionando 🡢</a>
+              <div class="project">
+                <div class="project-info">
+                  <h2 class="project-title">Lista de Despesas</h2>
+                  <p class="project-description">Um projeto desenvolvido com apenas JavaScript, HTML5 e CSS3. Tem o intuito de gerenciar despesas. A página calcula quanto se deve no total, o total pago e total a pagar. As despesas podem ser marcadas como pagas e seus dados são mantidos no armazenamento do navegador.</p>
+                  <div class="buttons">
+                    <a href="https://github.com/andraderafa72/despesas-da-casa" class="see-on-github" target="_blank" rel=”noreferrer”>Veja no GitHub</a>
+                    <a href="https://andraderafa72.github.io/despesas-da-casa/" class="see-it-working" target="_blank" rel=”noreferrer”>Veja Funcionando 🡢</a>
+                  </div>
+                </div>
+                <img src="./assets/img/projects/bills-list.png" alt="">
+              </div>
+              <div class="project">
+                <img src="./assets/img/projects/bmi-calculator.png" alt="">
+                <div class="project-info">
+                  <h2 class="project-title">Calculadora de IMC</h2>
+                  <p class="project-description">Um projeto desenvolvido com apenas JavaScript, HTML5 e CSS3. Possui um design simples e objetivo para quem procura calcular seu Indice de Massa Corporal (IMC).</p>
+                  <div class="buttons">
+                    <a href="https://github.com/andraderafa72/calculadora-de-imc" class="see-on-github" target="_blank" rel=”noreferrer”>Veja no GitHub</a>
+                    <a href="https://andraderafa72.github.io/calculadora-de-imc/" class="see-it-working" target="_blank" rel=”noreferrer”>Veja Funcionando 🡢</a>
+                  </div>
                 </div>
               </div>
-              <div class="card" id="card">
-                <img src="./assets/img/projects/bills-list.png" class="card-image" alt=""></img>
-                <h5 class="card-title">Bills List</h5>
-                <p class="card-description">Uma maneira simples e prática de gerenciar despesas.</p>
-                <div class="card-links">
-                  <a href="https://github.com/andraderafa72/" target="_blank" rel=”noreferrer” class="card-link">Veja no GitHub</a>
-                  <a href="https://andraderafa72.github.io/despesas-da-casa" target="_blank" rel=”noreferrer” class="card-link">Veja Funcionando 🡢</a>
+              <div class="project">
+                <div class="project-info">
+                  <h2 class="project-title">Lista de Tarefas</h2>
+                  <p class="project-description">Um projeto desenvolvido com apenas JavaScript, HTML5 e CSS3. Site feito para gerenciar suas tarefas diárias de maneira simples. As tarefas podem ser marcadas como concluidas e seus dados são mantidos no armazenamento do navegador.</p>
+                  <div class="buttons">
+                    <a href="https://github.com/andraderafa72/todolist" class="see-on-github" target="_blank" rel=”noreferrer”>Veja no GitHub</a>
+                    <a href="https://andraderafa72.github.io/todolist/" class="see-it-working" target="_blank" rel=”noreferrer”>Veja Funcionando 🡢</a>
+                  </div>
                 </div>
+                <img src="./assets/img/projects/todo-list.png" alt="">
               </div>
-  
-              <div class="card">
-                <img src="./assets/img/projects/bmi-calculator.png" class="card-image" alt=""></img>
-                <h5 class="card-title">BMI Calculator</h5>
-                <p class="card-description">Ou também calculadora de IMC. Calcula seu Indice de Massa corporal de acordo com seu peso e altura.</p>
-                <div class="card-links">
-                  <a href="" class="card-link">Veja no GitHub</a>
-                  <a href="" class="card-link">Veja Funcionando 🡢</a>
-                </div>
-              </div>
-  
             </div>
 
-            <h1>Node Projects</h1>
+            <a href="#" class="node-toggle">NodeJs Projects <span class="arrow-node">&#x1F861;</span></a>
             <div class="node-projects">
-              <div class="card">
-                <div class="card-image"></div>
-                <h5 class="card-title">Finanças</h5>
-                <p class="card-description">Project description</p>
-                <div class="card-links">
-                  <a href="" class="card-link">Veja no GitHub</a>
-                  <a href="" class="card-link">Veja Funcionando 🡢</a>
+              <div class="project">
+                <img src="./assets/img/projects/bmi-calculator.png" alt="">
+                <div class="project-info">
+                  <h2 class="project-title">Finanças</h2>
+                  <p class="project-description">Design e projeto feito para desenvolvimento pessoal nas mais modernas tecnologias de desenvolvimento web.</p>
+                  <div class="buttons">
+                    <a href="" class="see-on-github" target="_blank" rel=”noreferrer”>Veja no GitHub</a>
+                    <a href="https://github.com/andraderafa72/Financas-Web" class="see-it-working" target="_blank" rel=”noreferrer”>Veja Funcionando 🡢</a>
+                  </div>
                 </div>
               </div>
-
-              <div class="card">
-                <div class="card-image"></div>
-                <h5 class="card-title">Agenda JS</h5>
-                <p class="card-description">Project description</p>
-                <div class="card-links">
-                  <a href="" class="card-link">Veja no GitHub</a>
-                  <a href="" class="card-link">Veja Funcionando 🡢</a>
+              <div class="project">
+                <div class="project-info">
+                  <h2 class="project-title">Agenda Online</h2>
+                  <p class="project-description">Design e projeto feito para desenvolvimento pessoal nas mais modernas tecnologias de desenvolvimento web.</p>
+                  <div class="buttons">
+                    <a href="" class="see-on-github" target="_blank" rel=”noreferrer”>Veja no GitHub</a>
+                    <a href="https://github.com/andraderafa72/Agenda-JS" class="see-it-working" target="_blank" rel=”noreferrer”>Veja Funcionando 🡢</a>
+                  </div>
+                </div>
+                <img src="./assets/img/projects/bmi-calculator.png" alt="">
+              </div>
+              <div class="project">
+                <img src="./assets/img/projects/bills-list.png" alt="">
+                <div class="project-info">
+                  <h2 class="project-title">Lista de Despesas | ElectronJS</h2>
+                  <p class="project-description">Um projeto desenvolvido com apenas JavaScript, HTML5 e CSS3. Tem o intuito de gerenciar despesas. A página calcula quanto se deve no total, o total pago e total a pagar.</p>
+                  <div class="buttons">
+                    <a href="https://github.com/andraderafa72/despesas-da-casa-electron" class="see-on-github" target="_blank" rel=”noreferrer”>Veja no GitHub</a>
+                    <a href="" class="see-it-working" target="_blank" rel=”noreferrer”>Veja Funcionando 🡢</a>
+                  </div>
                 </div>
               </div>
-
-            <div class="card" id="card">
-              <div class="card-image"></div>
-              <img src="./assets/img/projects/todo-list.png" class="card-image" alt=""></img>
-              <h5 class="card-title">Lista de Tarefas - ElectronJS</h5>
-              <p class="card-description">Project description</p>
-              <div class="card-links">
-                <a href="" class="card-link">Veja no GitHub</a>
-                <a href="" class="card-link">Veja Funcionando 🡢</a>
+              <div class="project">
+                <div class="project-info">
+                  <h2 class="project-title">Lista de Tarefas | ElectronJS</h2>
+                  <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aliquid perspiciatis sint aspernatur repellendus porro magnam possimus nam dolore? Tempora quia pariatur, nostrum fugit dolorem est atque necessitatibus assumenda facilis.</p>
+                  <div class="buttons">
+                    <a href="" class="see-on-github" target="_blank" rel=”noreferrer”>Veja no GitHub</a>
+                    <a href="https://github.com/andraderafa72/todolist-electron" class="see-it-working" target="_blank" rel=”noreferrer”>Veja Funcionando 🡢</a>
+                  </div>
+                </div>
+                <img src="./assets/img/projects/todo-list.png" alt="">
               </div>
             </div>
 
-            <div class="card" id="card">
-              <img src="./assets/img/projects/bills-list.png" class="card-image" alt=""></img>
-              <h5 class="card-title">Bills List - ElectronJS</h5>
-              <p class="card-description">Project description</p>
-              <div class="card-links">
-                <a href="" class="card-link">Veja no GitHub</a>
-                <a href="" class="card-link">Veja Funcionando 🡢</a>
-              </div>
-            </div>
-            </div>
-            
-
-          </div>
-        </div>
+        </div> 
         <div class="skills">
           <div class="content">
             <h1 class="skills-title">Skills</h1>

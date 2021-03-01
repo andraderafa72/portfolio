@@ -20,24 +20,22 @@ ul{
   list-style-type: none;
 }
 
-body, html{overflow-x: hidden;}
-
 html{
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body{
+  overflow: hidden;
   background: $black-gradient;
 }
 ::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background: rgb(41, 37, 37); 
+  background: $blue; 
 }
 
 ::-webkit-scrollbar-track-piece  { 

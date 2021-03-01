@@ -87,7 +87,14 @@
 }
 @media(max-width:1024px){
   .card{
-    min-width: 10rem;
+    min-width: 29rem;
+    height: 455px!important;
     margin: 20px 40px;
+
+    .card-image{
+      height: 225px;
+    }
+
+    .card-title{margin-top: 225px!important;}
   }
 }
