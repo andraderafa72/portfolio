@@ -76,3 +76,16 @@
     $('.node-projects').toggleClass('closed');
   });
   
+  $('.close-tab-frontend').click(function(e){
+    e.preventDefault();
+    $('.front-end-toggle').toggleClass('toggled');
+    $('.arrow-frontend').toggleClass('open');
+    $('.front-end-projects').toggleClass('closed');
+  });
+  $('.close-tab-node').click(function(e){
+    e.preventDefault();
+    $('.node-toggle').toggleClass('toggled');
+    $('.arrow-node').toggleClass('open');
+    $('.node-projects').toggleClass('closed');
+  });
+  

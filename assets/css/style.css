@@ -692,12 +692,18 @@ main .container .portfolio .content .front-end-toggle span, main .container .por
   transition: .4s ease;
 }
 
+main .container .portfolio .content .front-end-toggle span img, main .container .portfolio .content .node-toggle span img {
+  width: 24px;
+  height: 24px;
+}
+
 main .container .portfolio .content .front-end-toggle span.open, main .container .portfolio .content .node-toggle span.open {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
 main .container .portfolio .content .front-end-projects, main .container .portfolio .content .node-projects {
+  position: relative;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -719,96 +725,6 @@ main .container .portfolio .content .front-end-projects.closed, main .container 
   display: none;
 }
 
-main .container .portfolio .content .front-end-projects .project, main .container .portfolio .content .node-projects .project {
-  margin: 18px 0;
-  background-color: #1a1a1a;
-  width: 100%;
-  max-width: 1440px;
-  max-height: 600px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-shadow: 0px 4px 18px 0px #374A59;
-          box-shadow: 0px 4px 18px 0px #374A59;
-}
-
-main .container .portfolio .content .front-end-projects .project img, main .container .portfolio .content .node-projects .project img {
-  width: 50%;
-}
-
-main .container .portfolio .content .front-end-projects .project .project-info, main .container .portfolio .content .node-projects .project .project-info {
-  padding: 44px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-main .container .portfolio .content .front-end-projects .project .project-info .project-title, main .container .portfolio .content .node-projects .project .project-info .project-title {
-  font-family: 'Poppins';
-  font-size: 2rem;
-  color: #f2f2f2;
-  font-weight: 400;
-}
-
-main .container .portfolio .content .front-end-projects .project .project-info .project-description, main .container .portfolio .content .node-projects .project .project-info .project-description {
-  margin-top: 24px;
-  font-family: 'Poppins';
-  font-size: 1rem;
-  opacity: .8;
-  font-weight: 400;
-  color: #f2f2f2;
-  letter-spacing: 2px;
-  text-align: justify;
-}
-
-main .container .portfolio .content .front-end-projects .project .project-info .buttons, main .container .portfolio .content .node-projects .project .project-info .buttons {
-  margin-top: 110px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-main .container .portfolio .content .front-end-projects .project .project-info .see-on-github,
-main .container .portfolio .content .front-end-projects .project .project-info .see-it-working, main .container .portfolio .content .node-projects .project .project-info .see-on-github,
-main .container .portfolio .content .node-projects .project .project-info .see-it-working {
-  position: relative;
-  font-family: Open Sans;
-  font-weight: 600;
-  font-size: .9rem;
-  color: #007AE9;
-}
-
-main .container .portfolio .content .front-end-projects .project .project-info .see-on-github::before,
-main .container .portfolio .content .front-end-projects .project .project-info .see-it-working::before, main .container .portfolio .content .node-projects .project .project-info .see-on-github::before,
-main .container .portfolio .content .node-projects .project .project-info .see-it-working::before {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #007AE9;
-  -webkit-transition: .7s ease;
-  transition: .7s ease;
-}
-
-main .container .portfolio .content .front-end-projects .project .project-info .see-on-github:hover::before,
-main .container .portfolio .content .front-end-projects .project .project-info .see-it-working:hover::before, main .container .portfolio .content .node-projects .project .project-info .see-on-github:hover::before,
-main .container .portfolio .content .node-projects .project .project-info .see-it-working:hover::before {
-  width: 100%;
-}
-
 main .container .skills {
   padding-top: 50px;
 }
@@ -822,6 +738,55 @@ main .container .skills .content .skills-title {
   font-size: 60px;
   letter-spacing: 9px;
   color: #f2f2f2;
+}
+
+.close-tab-frontend, .close-tab-node {
+  position: absolute;
+  top: 49%;
+  left: -55%;
+  width: 1600px;
+  text-align: center;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  color: white;
+  font-weight: 400;
+}
+
+.close-tab-frontend::before, .close-tab-node::before {
+  content: '';
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+.close-tab-frontend::before {
+  background-color: #56CCF2;
+}
+
+.close-tab-node::before {
+  background-color: #42ef84;
+}
+
+@media (max-width: 1440px) {
+  .close-tab-frontend, .close-tab-node {
+    left: -56%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .close-tab-frontend, .close-tab-node {
+    left: -57%;
+  }
+}
+
+@media (max-width: 1375px) {
+  .close-tab-frontend, .close-tab-node {
+    left: -57.5%;
+  }
 }
 
 @media (max-width: 1369px) {
@@ -847,17 +812,12 @@ main .container .skills .content .skills-title {
   main .container .hero .nav-hero {
     padding: 0px 24px;
   }
-  main .container .portfolio .content .front-end-projects .project, main .container .portfolio .content .node-projects .project {
-    min-height: 400px;
+  .close-tab-frontend, .close-tab-node {
+    top: 46%;
+    left: -71%;
   }
-  main .container .portfolio .content .front-end-projects .project img, main .container .portfolio .content .node-projects .project img {
-    width: 60%;
-  }
-  main .container .portfolio .content .front-end-projects .project .project-info .project-title, main .container .portfolio .content .node-projects .project .project-info .project-title {
-    font-size: 1.4rem;
-  }
-  main .container .portfolio .content .front-end-projects .project .project-info .project-description, main .container .portfolio .content .node-projects .project .project-info .project-description {
-    font-size: .8rem;
+  .close-tab-frontend::before, .close-tab-node::before {
+    width: 95%;
   }
 }
 
@@ -890,14 +850,8 @@ main .container .skills .content .skills-title {
             flex-direction: column;
     max-height: none;
   }
-  main .container .portfolio .content .front-end-projects .project:nth-child(2), main .container .portfolio .content .front-end-projects .project:nth-child(4), main .container .portfolio .content .node-projects .project:nth-child(2), main .container .portfolio .content .node-projects .project:nth-child(4) {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
   main .container .portfolio .content .front-end-projects .project img, main .container .portfolio .content .node-projects .project img {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -934,6 +888,134 @@ main .container .skills .content .skills-title {
 @media (max-width: 500px) {
   .front-end-projects, .node-projects {
     padding: 0 !important;
+  }
+  .close-tab-frontend, .close-tab-node {
+    width: 2435px;
+    font-size: .8rem;
+    top: 47%;
+    left: -317.5%;
+  }
+  .close-tab-node {
+    width: 2400px;
+    left: -313%;
+  }
+}
+
+.project {
+  margin: 18px 0;
+  background-color: #1a1a1a;
+  width: 100%;
+  max-width: 1440px;
+  max-height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0px 4px 18px 0px #374A59;
+          box-shadow: 0px 4px 18px 0px #374A59;
+}
+
+.project img {
+  max-width: 45%;
+  max-height: 350px;
+}
+
+.project .project-info {
+  padding: 44px 44px 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.project .project-info .project-title {
+  font-family: 'Poppins';
+  font-size: 2rem;
+  color: #f2f2f2;
+  font-weight: 400;
+  height: 42px;
+}
+
+.project .project-info .project-description {
+  font-family: 'Poppins';
+  font-size: 1rem;
+  opacity: .8;
+  font-weight: 400;
+  color: #f2f2f2;
+  letter-spacing: 2px;
+  text-align: justify;
+  height: 190px;
+}
+
+.project .project-info .buttons {
+  height: 30px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.project .project-info .see-on-github,
+.project .project-info .see-it-working {
+  max-height: 24px;
+  position: relative;
+  font-family: Open Sans;
+  font-weight: 600;
+  font-size: .9rem;
+  color: #007AE9;
+}
+
+.project .project-info .see-on-github::before,
+.project .project-info .see-it-working::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #007AE9;
+  -webkit-transition: .7s ease;
+  transition: .7s ease;
+}
+
+.project .project-info .see-on-github:hover::before,
+.project .project-info .see-it-working:hover::before {
+  width: 100%;
+}
+
+@media (max-width: 1368px) {
+  .project {
+    max-height: none;
+  }
+  .project img {
+    max-width: 50%;
+    max-height: none;
+  }
+  .project .project-info .project-title {
+    font-size: 1.4rem;
+  }
+  .project .project-info .project-description {
+    font-size: .8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .project .project-info .project-title {
+    height: 52px;
+    font-size: 1.25rem;
+  }
+  .project .project-info .project-description {
+    height: 180px;
+    font-size: 0.7rem;
+    text-align: left;
   }
 }
 /*# sourceMappingURL=style.css.map */
