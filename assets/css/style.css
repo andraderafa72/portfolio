@@ -842,6 +842,7 @@ main .container .skills .content .skills-title {
   text-align: center;
   border: 2px solid;
   border-radius: 6px;
+  margin-bottom: 24px;
 }
 
 .close-tab-frontend::before, .close-tab-node::before {
@@ -915,9 +916,11 @@ main .container .skills .content .skills-title {
     max-width: 500px;
     font-size: 2rem;
     letter-spacing: 2px;
+    padding-left: 12px;
   }
   main .container .hero .content .hero-subtitle {
     font-size: 18px;
+    padding-left: 12px;
   }
   main .container .hero .content .hero-button {
     letter-spacing: 2px;
@@ -973,6 +976,9 @@ main .container .skills .content .skills-title {
 @media (max-width: 500px) {
   .front-end-projects, .node-projects {
     padding: 0 !important;
+  }
+  .entrada-content h1 {
+    font-size: 2rem !important;
   }
 }
 
