@@ -35,22 +35,58 @@ main{
           color: $white-dark;
           font-weight: 400;
           font-size: 22px;
-          letter-spacing: 4px;
+          letter-spacing: 2px;
           opacity: 0.6;
           margin: -15px 0 48px;
         }
         
         .hero-button{
-          margin-left: 36px;
           display: inline-block;
+          position: relative;
+          margin-left: 36px;
           padding: 12px 55px;
           color: $white;
           letter-spacing: 4px;
           background: $blue-gradient;
           transform: skewX(-10deg);
+          
+          &::before, &::after{
+            opacity: 0;
+            content: '';
+            position: absolute;
+            width: 25%;
+            height: 50%;
+            z-index: -1;
+            transition: .7s ease;
+            border-radius: 2px;
+          }
+          
+          &::before{
+            z-index: -1;
+            top: -2px;
+            left: -2px;
+            border-top: 3px solid white;
+            border-left: 3px solid white;    
+          }
+          
+          &::after{
+            z-index: -1;
+            bottom: -2px;
+            right: -2px;
+            border-bottom: 3px solid white;
+            border-right: 3px solid white;    
+          }
 
           &:hover{
             transform: skewX(-15deg) scale(1.04);
+            &::before{
+              opacity: 1;
+            }
+            
+            &::after{
+              opacity: 1;
+            }
+  
           }
         }
 
@@ -102,6 +138,11 @@ main{
               display: flex;
               align-items: center;
               justify-content: center;
+
+              &:hover svg path{
+                transition: .7s ease;
+                fill: $blue;
+              }
             }
           }
         }
@@ -198,46 +239,40 @@ main{
 }
 
 .close-tab-frontend, .close-tab-node{
-  position: absolute;
-  top: 49%;
-  left: -55%;
-  // height: 100%;
-  width: 1600px;
+  position: relative;
+  width: 100%;
+  padding: 12px 0;
+  font-size: 1rem;
+  color: $white-dark;
   text-align: center;
-  transform: rotate(-90deg);
-  color: white;
-  font-weight: 400;
+  border: 2px solid;
+  border-radius: 6px;
 
   &::before{
     content: '';
-    transform: rotate(0deg);
     position: absolute;
     bottom: 0;
     left: 0;
+    height: 0%;
     width: 100%;
-    height: 3px;
+    transition: .7s ease;
+    z-index: -1;
+  }
+
+  &:hover{
+    color:black;
+    font-weight: bold;
+    &::before{
+      height: 100%;
+    }
   }
 }
 
+.close-tab-frontend{border-color: $blue-light;}
+.close-tab-node{border-color: $green-light;}
 .close-tab-frontend::before{background-color: $blue-light;}
 .close-tab-node::before{background-color: $green-light;}
 
-
-@media(max-width: 1440px){
-  .close-tab-frontend, .close-tab-node{
-    left: -56%;
-  }  
-}
-@media(max-width: 1400px){
-  .close-tab-frontend, .close-tab-node{
-    left: -57%;
-  }  
-}
-@media(max-width: 1375px){
-  .close-tab-frontend, .close-tab-node{
-    left: -57.5%;
-  }  
-}
 @media(max-width: 1369px){
   main{
     .container{
@@ -269,14 +304,7 @@ main{
       }
     }
   }
- 
-  .close-tab-frontend, .close-tab-node{
-    top: 46%;
-    left: -71%;
-    &::before{
-      width: 95%;
-    }
-  }  
+  
 }
 
 @media(max-width: 1024px){
@@ -352,15 +380,4 @@ main{
 
 @media(max-width:500px){
   .front-end-projects, .node-projects{padding: 0!important;}
-  .close-tab-frontend, .close-tab-node{
-    width: 2435px;
-    font-size: .8rem;
-    top: 47%;
-    left: -317.5%;
-  }  
-
-  .close-tab-node{
-    width: 2400px;
-    left: -313%;
-  }
 }

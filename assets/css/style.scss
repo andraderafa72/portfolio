@@ -28,6 +28,7 @@ html{
 body{
   overflow: hidden;
   background: $black-gradient;
+  transition: .7s ease;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -40,6 +41,26 @@ body{
 
 ::-webkit-scrollbar-track-piece  { 
   background: rgb(65, 60, 60); 
+}
+
+
+body.entrada{
+  header, main{
+    display: none;
+  }
+  .entrada-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: $black-gradient;
+    h1{
+      font-size: 3.5rem;
+      color: $white-darker;
+      font-weight: 400;
+    }
+  }
 }
 
 @import './partials/burguer';
