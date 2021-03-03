@@ -10,6 +10,8 @@ $(window).on('load', () =>{
 $('.burguer-menu').click(function(){
   $('.hamburguer-menu').toggleClass('open');
   $('.burguer-menu').toggleClass('open');
+  $('header').removeClass('animate__animated');
+  $('header').removeClass('animate__fadeInDown');
 });
 
 $('.h-link').click(function(){
@@ -68,7 +70,7 @@ function animateOnScroll(){
   itensNode.forEach((item, index) =>{
     const itemTop = item.offsetTop;
     console.log(window.innerHeight)
-    
+
     if((windowTop) > itemTop + 2400){
       item.classList.add(animationClass)
     }else{

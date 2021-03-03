@@ -234,7 +234,8 @@ body.entrada .entrada-content {
 }
 
 body.entrada .entrada-content h1 {
-  font-size: 3.5rem;
+  padding: 10px 0;
+  font-size: 3rem;
   color: #f8f8f8;
   font-weight: 400;
 }
@@ -249,17 +250,19 @@ body.entrada .entrada-content h1 {
   -webkit-transition: .2s all;
   transition: .2s all;
   -webkit-tap-highlight-color: transparent;
-  z-index: 90;
+  z-index: 999;
 }
 
 .burger .burger-lines:after {
   left: 0;
   top: -1em;
+  z-index: 999;
 }
 
 .burger .burger-lines:before {
   left: 1em;
   top: 1em;
+  z-index: 999;
 }
 
 .burger:after {
@@ -270,11 +273,13 @@ body.entrada .entrada-content h1 {
   width: 150%;
   top: -25%;
   left: -25%;
+  z-index: 999;
 }
 
 .burger .burger-lines {
   top: 50%;
   margin-top: -0.125em;
+  z-index: 999;
 }
 
 .burger .burger-lines, .burger .burger-lines:after, .burger .burger-lines:before {
@@ -339,7 +344,7 @@ body.entrada .entrada-content h1 {
   right: -100vw;
   min-width: 100vw;
   min-height: 100vh;
-  z-index: 9;
+  z-index: 2;
   background: rgba(0, 0, 0, 0.9);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1089,6 +1094,9 @@ main .container .skills .content .skills-title {
 }
 
 @media (max-width: 500px) {
+  .project .project-info {
+    padding: 22px 22px 11px;
+  }
   .project .project-info .project-title {
     height: 52px;
     font-size: 1.25rem;
