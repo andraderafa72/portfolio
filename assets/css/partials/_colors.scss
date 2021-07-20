@@ -1,15 +1,8 @@
-$green:#00e961;
-$green-light:#42ef84;
+$background: #FBF6F2;
+$primary-color: #5E2129;
+$left-gradient: linear-gradient(to left, rgba(94, 33, 41, 0.6), rgba(94, 33, 41, 0.1));
+$top-gradient: linear-gradient(to top, rgba(94, 33, 41, 0.8), rgba(94, 33, 41, 0.08));
 
-$blue:#42A6EF;
-$blue-link:#007AE9;
-$blue-light:#56CCF2;
-$blue-gradient: linear-gradient(to right, #56CCF2 0%, #2F80ED 100%);
+$text: #363F5F;
+$subtitle: #AEA9AB;
 
-$white: #f2f2f2;
-$white-dark: #f6f6f6;
-$white-darker: #f8f8f8;
-
-$black: #1a1a1a;
-$black-light: #374A59;
-$black-gradient: linear-gradient(270deg, #1A1A1A 0%, #232526 100%);

@@ -1,195 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Rafael Andrade</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-  <script src="./assets/js/svg-inject.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Poppins:wght@500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-<body class="entrada">
-
-  <div class="entrada-content">
-    <h1 class="animate__animated animate__fadeInDown">Seja bem vindo!</h1>
-  </div>
-
-  <div class="hamburguer-menu">
-    <ul>
-      <li class="nav-item"><a href="" class="h-link">Sobre Mim</a></li>
-      <li class="nav-item"><a href="#portfolio" class="h-link">Portfólio</a></li>
-      <li class="nav-item"><a href="" class="h-link">Contato</a></li>
-    </ul>
-    <ul class="social-media-header">
-      <li><a href="https://wa.me/5584988181526"><img src="./assets/img/instagram.svg" onload="SVGInject(this)" alt=""></a></li>
-      <li><a href="https://wa.me/5584988181526"><img src="./assets/img/github.svg" onload="SVGInject(this)" alt=""></a></li>
-      <li><a href="https://wa.me/5584988181526"><img src="./assets/img/LinkedIn.svg" onload="SVGInject(this)" alt=""></a></li>
-      <li><a href="https://wa.me/5584988181526"><img src="./assets/img/message_circle.svg" onload="SVGInject(this)" alt=""></a></li>
-    </ul>
-    <p>devrafael72@gmail.com</p>
-  </div>
-
-  <header class="animate__animated animate__fadeInDown">
-    <div class="div-header">
-      <p class="logo">Rafael A. Mirapalheta</p>
-      <ul class="nav-list">
-        <li class="nav-item"><a href="" class="nav-link">Sobre Mim</a></li>
-        <li class="nav-item"><a href="#portfolio" class="nav-link">Portfólio</a></li>
-        <li class="nav-item"><a href="" class="nav-link">Contato</a></li>
+<body>
+  <header>
+    <section class="navbar">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
       </ul>
-      <div class="burger burguer-menu burger-rotate">
-        <div class="burger-lines"></div>
-      </div>
-    </div>
-  </header>
-  
-  <main>
-    <section class="container">
-        <div class="hero animate__animated animate__fadeInUp">
-          <div class="content">
-            <h1 class="hero-title">
-            <span>Hello</span>, i am a Developer and Web Designer
-            </h1>
-            <h3 class="hero-subtitle">
-              I’m always open for ideas
-            </h3>
-            <a href="" class="hero-button">Contate-me</a>
-          </div>
 
-          <div class="nav-hero">
-            <p>devrafael72@gmail.com</p>
-            <a href="#portfolio" class="veja-mais">Veja mais</a>
-            <ul class="social-media">
-              <li><a href="https://wa.me/5584988181526" target="_blank" rel=”noreferrer”><img src="./assets/img/instagram.svg" onload="SVGInject(this)" alt=""></a></li>
-              <li><a href="https://wa.me/5584988181526" target="_blank" rel=”noreferrer”><img src="./assets/img/github.svg" onload="SVGInject(this)" alt=""></a></li>
-              <li><a href="https://wa.me/5584988181526" target="_blank" rel=”noreferrer”><img src="./assets/img/LinkedIn.svg" onload="SVGInject(this)" alt=""></a></li>
-              <li><a href="https://wa.me/5584988181526" target="_blank" rel=”noreferrer”><img src="./assets/img/message_circle.svg" onload="SVGInject(this)" alt=""></a></li>
-            </ul>
-          </div>
-        </div>
+      <span class="logo">Rafa.</span>
 
-        <div class="portfolio" id="portfolio">
-          <h1 class="portfolio-title">Portfólio</h1>
-          <div class="content">
-
-            <a href="#" class="front-end-toggle">Front-end Projects <span class="arrow-frontend"><img src="./assets/img/seta-para-cima.svg" alt=""></span></a>
-            <div class="front-end-projects">
-              <div class="project fe" >
-                <img src="./assets/img/projects/frontend/sm-ui.png" alt="">
-                <div class="project-info">
-                  <h2 class="project-title">UI Concept - Spider Man</h2>
-                  <p class="project-description">Design e projeto feito para desenvolvimento pessoal nas mais modernas tecnologias de desenvolvimento web.</p>
-                  <div class="buttons">
-                    <a href="https://github.com/andraderafa72/SpiderMan-Frontend" class="see-on-github" target="_blank" rel=”noreferrer”>Veja no GitHub</a>
-                    <a href="https://andraderafa72.github.io/SpiderMan-Frontend/" class="see-it-working" target="_blank" rel=”noreferrer”>Veja Funcionando 🡢</a>
-                  </div>
-                </div>
-              </div>
-              <div class="project fe" >
-                <img src="./assets/img/projects/frontend/bills-list.png" alt="">
-                <div class="project-info">
-                  <h2 class="project-title">Lista de Despesas</h2>
-                  <p class="project-description">Um projeto desenvolvido com apenas JavaScript, HTML5 e CSS3. Tem o intuito de gerenciar despesas. A página calcula quanto se deve no total, o total pago e total a pagar. As despesas podem ser marcadas como pagas e seus dados são mantidos no armazenamento do navegador.</p>
-                  <div class="buttons">
-                    <a href="https://github.com/andraderafa72/despesas-da-casa" class="see-on-github" target="_blank" rel=”noreferrer”>Veja no GitHub</a>
-                    <a href="https://andraderafa72.github.io/despesas-da-casa/" class="see-it-working" target="_blank" rel=”noreferrer”>Veja Funcionando 🡢</a>
-                  </div>
-                </div>
-              </div>
-              <div class="project fe" >
-                <img src="./assets/img/projects/frontend/bmi-calculator.png" alt="">
-                <div class="project-info">
-                  <h2 class="project-title">Calculadora de IMC</h2>
-                  <p class="project-description">Um projeto desenvolvido com apenas JavaScript, HTML5 e CSS3. Possui um design simples e objetivo para quem procura calcular seu Indice de Massa Corporal (IMC).</p>
-                  <div class="buttons">
-                    <a href="https://github.com/andraderafa72/calculadora-de-imc" class="see-on-github" target="_blank" rel=”noreferrer”>Veja no GitHub</a>
-                    <a href="https://andraderafa72.github.io/calculadora-de-imc/" class="see-it-working" target="_blank" rel=”noreferrer”>Veja Funcionando 🡢</a>
-                  </div>
-                </div>
-              </div>
-              <div class="project fe" >
-                <img src="./assets/img/projects/frontend/todo-list.png" alt="">
-                <div class="project-info">
-                  <h2 class="project-title">Lista de Tarefas</h2>
-                  <p class="project-description">Um projeto desenvolvido com apenas JavaScript, HTML5 e CSS3. Site feito para gerenciar suas tarefas diárias de maneira simples. As tarefas podem ser marcadas como concluidas e seus dados são mantidos no armazenamento do navegador.</p>
-                  <div class="buttons">
-                    <a href="https://github.com/andraderafa72/todolist" class="see-on-github" target="_blank" rel=”noreferrer”>Veja no GitHub</a>
-                    <a href="https://andraderafa72.github.io/todolist/" class="see-it-working" target="_blank" rel=”noreferrer”>Veja Funcionando 🡢</a>
-                  </div>
-                </div>
-              </div>
-              <a href="" class="close-tab-frontend">Clique aqui para fechar a Aba</a>
-            </div>
-
-            <a href="#" class="node-toggle">NodeJs Projects <span class="arrow-node"><img src="./assets/img/seta-para-cima.svg" alt=""></span></a>
-            <div class="node-projects">
-              <div class="project node" >
-                <img src="./assets/img/projects/node/Finanças.PNG" alt="">
-                <div class="project-info">
-                  <h2 class="project-title">Finanças</h2>
-                  <p class="project-description">Design e projeto feito para desenvolvimento pessoal nas mais modernas tecnologias de desenvolvimento web.</p>
-                  <div class="buttons">
-                    <a href="" class="see-on-github" target="_blank" rel=”noreferrer”>Veja no GitHub</a>
-                    <a href="https://github.com/andraderafa72/Financas-Web" class="see-it-working" target="_blank" rel=”noreferrer”>Veja Funcionando 🡢</a>
-                  </div>
-                </div>
-              </div>
-              <div class="project node" >
-                <img src="./assets/img/projects/node/AgendaJS.png" alt="">
-                <div class="project-info">
-                  <h2 class="project-title">Agenda Online</h2>
-                  <p class="project-description">Design e projeto feito para desenvolvimento pessoal nas mais modernas tecnologias de desenvolvimento web.</p>
-                  <div class="buttons">
-                    <a href="" class="see-on-github" target="_blank" rel=”noreferrer”>Veja no GitHub</a>
-                    <a href="https://github.com/andraderafa72/Agenda-JS" class="see-it-working" target="_blank" rel=”noreferrer”>Veja Funcionando 🡢</a>
-                  </div>
-                </div>
-              </div>
-              <div class="project node" >
-                <img src="./assets/img/projects/node/BillsList.PNG" alt="">
-                <div class="project-info">
-                  <h2 class="project-title">Lista de Despesas | ElectronJS</h2>
-                  <p class="project-description">Um projeto desenvolvido com apenas JavaScript, HTML5 e CSS3. Tem o intuito de gerenciar despesas. A página calcula quanto se deve no total, o total pago e total a pagar.</p>
-                  <div class="buttons">
-                    <a href="https://github.com/andraderafa72/despesas-da-casa-electron" class="see-on-github" target="_blank" rel=”noreferrer”>Veja no GitHub</a>
-                    <a href="" class="see-it-working" target="_blank" rel=”noreferrer”>Veja Funcionando 🡢</a>
-                  </div>
-                </div>
-              </div>
-              <div class="project node" >
-                <img src="./assets/img/projects/node/TodoList 2.png" alt="">
-                <div class="project-info">
-                  <h2 class="project-title">Lista de Tarefas | ElectronJS</h2>
-                  <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aliquid perspiciatis sint aspernatur repellendus porro magnam possimus nam dolore? Tempora quia pariatur, nostrum fugit dolorem est atque necessitatibus assumenda facilis.</p>
-                  <div class="buttons">
-                    <a href="" class="see-on-github" target="_blank" rel=”noreferrer”>Veja no GitHub</a>
-                    <a href="https://github.com/andraderafa72/todolist-electron" class="see-it-working" target="_blank" rel=”noreferrer”>Veja Funcionando 🡢</a>
-                  </div>
-                </div>
-              </div>
-              <a href="" class="close-tab-node">Clique aqui para fechar a Aba</a>
-            </div>
-
-        </div> 
-        <!-- <div class="skills">
-          <div class="content">
-            <h1 class="skills-title">Skills</h1>
-
-          </div>
-        </div> -->
+      <ul>
+        <li><a href="">Works</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
     </section>
+  </header>
 
+  <main>
+    <section class="hero">
+      <div class="content">
+        <div class="text-left">
+          <h3>Welcome 👋</h3>
+          <h1>I'm Rafael,</h1>
+          <h4>a junior front-end developer passionate about creating interfaces and systems.</h4>
+          <button type="button" class="contact-me">Contact me</button>
+        </div>
+        <div class="image">
+          <img src="" class="me-image" alt="Esse sou eu.">
+        </div>
+      </div>
+    </section>
   </main>
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
-  <script src="./assets/js/index.js"></script>
+
+  <script src="/assets/js/index.js"></script>
 </body>
 </html>
