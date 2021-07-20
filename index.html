@@ -11,23 +11,30 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Poppins:wght@500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
   <div class="welcome-screen">
     <h1 class="tracking-in-expand">&lt;/ Hello world! &gt;</h1>
   </div>
 
-  <header>
+  <div class="social-media">
+    <a target="_blank" href="https://wa.me/5584988181526">WhatsApp</a>
+    <a target="_blank" href="https://linkedin.com/in/andraderafa72">LinkedIn</a>
+    <a target="_blank" href="https://github.com/andraderafa72">GitHub</a>
+  </div>
+
+  <header id="home">
     <section class="navbar">
       <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about-me">About</a></li>
       </ul>
 
       <span class="logo">Rafa.</span>
 
       <ul>
-        <li><a href="">Works</a></li>
+        <li><a href="#works">Works</a></li>
         <li><a href="">Contact</a></li>
       </ul>
     </section>
@@ -58,8 +65,124 @@
         </div>
       </div>
     </section>
+
+    <section class="about-me" id="about-me">
+      <div
+        class="wrapper"
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-once="false"
+      >
+        <div class="image">
+          <img src="" alt="Eu tbm">
+        </div>
+        <div class="content">
+          <h5>About me</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, aut facere dolor quibusdam sed magni deserunt id dolores, ab soluta minus repellendus velit saepe rem excepturi et, autem ex quas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="works" id="works">
+      <h2>Selected Works</h2>
+      <div class="content">
+        <section class="work-cards">
+          <div class="card">
+            <div class="content">
+              <h5>dtmoney</h5>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. V
+                eritatis doloremque perferendis qui eligendi exercitationem facilis
+                earum aliquid. Maiores voluptatibus quae tempore nulla
+                 fugiat, earum deserunt, provident vel quidem asperiores quasi.</p>
+              <div class="language-cards">
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=HTML5&color=%23E34F26&style=for-the-badge&logo=html5&logoColor=whitesmoke" alt="HTML5"></a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=CSS3&color=%231500B6&style=for-the-badge&logo=css3&logoColor=whitesmoke" alt="CSS3"></a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=SASS&color=%23CC6699&style=for-the-badge&logo=sass&logoColor=whitesmoke" alt="SASS"></a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=Styled%20Components&color=purple&style=for-the-badge&logo=styled-components&logoColor=whitesmoke" alt="Styled Components"></a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=Typescript&color=%231570B6&style=for-the-badge&logo=typescript&logoColor=whitesmoke" alt="Typescript"> </a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=ReactJS&color=%231545B6&style=for-the-badge&logo=react&logoColor=whitesmoke" alt="ReactJS"></a>
+              </div>
+              <div class="buttons">
+                <a target="_blank" href="">See it working</a>
+                <a target="_blank" href="https://github.com/andraderafa72/dtmoney">See on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="content">
+              <h5>GitHub Explorer</h5>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. V
+                eritatis doloremque perferendis qui eligendi exercitationem facilis
+                earum aliquid. Maiores voluptatibus quae tempore nulla
+                 fugiat, earum deserunt, provident vel quidem asperiores quasi.</p>
+
+              <div class="language-cards">
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=HTML5&color=%23E34F26&style=for-the-badge&logo=html5&logoColor=whitesmoke" alt="HTML5"></a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=CSS3&color=%231572B6&style=for-the-badge&logo=css3&logoColor=whitesmoke" alt="CSS3"></a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=SASS&color=%23CC6699&style=for-the-badge&logo=sass&logoColor=whitesmoke" alt="SASS"></a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=Typescript&color=%231570B6&style=for-the-badge&logo=typescript&logoColor=whitesmoke" alt="Typescript"> </a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=ReactJS&color=%231545B6&style=for-the-badge&logo=react&logoColor=whitesmoke" alt="ReactJS"></a>
+              </div>
+              <div class="buttons">
+                <a target="_blank" href="">See it working</a>
+                <a target="_blank" href="https://github.com/andraderafa72/github-explorer">See on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="content">
+              <h5>Letmeask</h5>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. V
+                eritatis doloremque perferendis qui eligendi exercitationem facilis
+                earum aliquid. Maiores voluptatibus quae tempore nulla
+                 fugiat, earum deserunt, provident vel quidem asperiores quasi.</p>
+              <div class="language-cards">
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=HTML5&color=%23E34F26&style=for-the-badge&logo=html5&logoColor=whitesmoke" alt="HTML5"></a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=CSS3&color=%231572B6&style=for-the-badge&logo=css3&logoColor=whitesmoke" alt="CSS3"></a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=SASS&color=%23CC6699&style=for-the-badge&logo=sass&logoColor=whitesmoke" alt="SASS"></a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=Typescript&color=%231570B6&style=for-the-badge&logo=typescript&logoColor=whitesmoke" alt="Typescript"> </a>
+                <a href="https://pt-br.reactjs.org/"><img src="https://img.shields.io/static/v1?label=&message=ReactJS&color=%231545B6&style=for-the-badge&logo=react&logoColor=whitesmoke" alt="ReactJS"></a>
+                <a href="https://nextjs.org/"><img src="https://img.shields.io/static/v1?label=&message=Next.JS&color=black&style=for-the-badge&logo=next.js&logoColor=whitesmoke" alt="Next.JS"></a>
+              </div>
+
+              <div class="buttons">
+                <a target="_blank" href="">See it working</a>
+                <a target="_blank" href="https://github.com/andraderafa72/letmeask">See on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </section>
+
+    <section class="contact-me">
+      <h2>Contact Me</h2>
+
+      <div class="content"></div>
+    </section>
   </main>
 
+  <footer>
+    <section class="navbar">
+      <span class="logo">Rafa.</span>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </section>
+
+    <i>Rafael Andrade Mirapalheta, 2021 @ All rights reserved.</i>
+  </footer>
+
   <script src="/assets/js/index.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

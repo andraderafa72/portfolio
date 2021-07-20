@@ -2,76 +2,107 @@
 @import './partials/_layout';
 @import './partials/_lines';
 @import './partials/_animations';
+@import './partials/_cards';
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 
-  @media(max-width: 1080px){
+  @media(max-width: 1080px) {
     font-size: 93.75%;
   }
 
-  @media(max-width: 768px){
+  @media(max-width: 768px) {
     font-size: 87.5%;
   }
 }
 
-body{
+::-webkit-scrollbar {
+  background: transparent;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $secondary-color;
+}
+
+
+body {
   background: $background;
+  overflow-x: hidden;
+
   -webkit-font-smoothing: antialiased;
 }
 
-body, input, textarea, button{
+body,
+input,
+textarea,
+button {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
 }
 
-ul{
+ul {
   list-style: none;
   display: flex;
 
-  li{
+  li {
     font-size: 1.125rem;
-    a {
-      padding: 0 1rem;
-      text-decoration: none;
-      color: $text;
-      transition: .4s;
-      letter-spacing: 1px;
 
-      &:hover{
-        color: #000;
-      }
+    a{
+      color: $text;
     }
 
-    & + li{
+    &+li {
       margin-left: 1rem;
     }
   }
 }
 
-h1, h2, h3, h5, h6, strong{
+a {
+  padding: 0 1rem;
+  text-decoration: none;
+  transition: .4s;
+  letter-spacing: 1px;
+
+  &:hover {
+    color: #000;
+  }
+}
+
+h1,
+h2,
+h3,
+h5,
+h6,
+strong {
   font-weight: 700;
   font-family: 'Playfair Display', sans-serif;
 }
 
-h3{
+h3 {
   color: $subtitle;
   font-size: 2.5rem;
   font-weight: normal;
 }
 
-h1{
+h1 {
   color: $primary-color;
   font-size: 4.5rem;
 }
 
-h4{
+h2{
+  color: $primary-color;
+  font-size: 4rem;
+}
+
+h4 {
   font-family: 'Oswald', sans-serif;
   color: $text;
   font-weight: 300;
@@ -79,13 +110,23 @@ h4{
   margin-top: 1.5rem;
 }
 
-button{
+h5{
+  color: $secondary-color;
+  font-size: 1.75rem;
+}
+
+p{
+  color: $text;
+  text-indent: 1rem;
+}
+
+button {
   cursor: pointer;
   font-size: 1.125rem;
   // font-weight: 600;
 }
 
-button.contact-me{
+button.contact-me {
   margin-top: 2rem;
   background: transparent;
   border: 2px solid $primary-color;
@@ -94,7 +135,7 @@ button.contact-me{
   width: 40%;
   transition: .4s;
 
-  &:hover{
+  &:hover {
     color: #fff;
     background: $primary-color;
   }
@@ -105,10 +146,34 @@ button.contact-me{
   cursor: not-allowed;
 }
 
-.navbar{
-  ul li a{
+.social-media{
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+
+  a{
+    background-color: $secondary-color;
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+
+    img{
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+}
+
+.navbar {
+  ul li a {
     position: relative;
-    &::before{
+
+    &::before {
       position: absolute;
       content: '';
       width: 3px;
@@ -121,15 +186,15 @@ button.contact-me{
       background: $top-gradient;
     }
 
-    &:hover{
-      &::before{
+    &:hover {
+      &::before {
         height: 200%;
       }
     }
   }
 }
 
-span.logo{
+span.logo {
   display: inline-block;
   font-family: 'Poppins', 'Oswald', sans-serif;
   font-weight: 500;
@@ -137,7 +202,12 @@ span.logo{
   letter-spacing: 2px;
 }
 
-.me-image{
+footer span.logo{
+  font-size: 2rem;
+  color: #fff;
+}
+
+.me-image {
   position: relative;
   width: 80%;
   margin: 0 auto;
@@ -145,7 +215,8 @@ span.logo{
   height: 25rem;
   border-radius: .25rem;
 
-  &::before, &::after{
+  &::before,
+  &::after {
     position: absolute;
     content: '';
     width: 100%;
@@ -155,13 +226,14 @@ span.logo{
     border-radius: .25rem;
   }
 
-  &::before{
+  &::before {
     top: -3%;
     left: -3%;
     background-color: $primary-color;
     box-shadow: 0px 16px 64px 0px rgba(94, 33, 41, 0.35);
   }
-  &::after{
+
+  &::after {
     bottom: -3%;
     right: -3%;
     border: 2px solid $primary-color;
@@ -169,32 +241,33 @@ span.logo{
   }
 }
 
-.hidden-animation{
+.hidden-animation {
   animation: hideWelcomeScreen .7s ease;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
 .tracking-in-expand {
-	-webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  -webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 .tracking-out-contract {
-	-webkit-animation: tracking-out-contract 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: tracking-out-contract 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  -webkit-animation: tracking-out-contract 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: tracking-out-contract 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 @media(min-width: 1280px) {
-  .me-image{
-    &:hover{
-      &::after{
+  .me-image {
+    &:hover {
+      &::after {
         bottom: 5%;
         right: 4%;
       }
-      &::before{
+
+      &::before {
         top: 5%;
         left: 4%;
       }
@@ -203,18 +276,18 @@ span.logo{
 }
 
 @media(max-width: 1080px) {
-  h3{
+  h3 {
     color: $subtitle;
     font-size: 1.5rem;
     font-weight: normal;
   }
 
-  h1{
+  h1 {
     color: $primary-color;
     font-size: 2.5rem;
   }
 
-  h4{
+  h4 {
     font-family: 'Oswald', sans-serif;
     color: $text;
     font-weight: 300;

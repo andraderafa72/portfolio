@@ -1,18 +1,50 @@
-main, header{
+main,
+header {
   width: 100%;
 }
 
-main{
+main {
   padding: 0 3rem;
 }
 
-header{
+footer{
+  background: $secondary-color;
+  height: 15rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:center;
+  color: #fff;
+
+  span{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin: 1rem 0 2rem;
+  }
+
+  ul li a{
+    color: $subtitle;
+
+    &:hover{
+      color: #fff;
+    }
+  }
+
+  i{
+    text-align: center;
+    width: 100%;
+  }
+}
+
+header {
   padding: 0 2rem;
   height: 7rem;
   display: flex;
   align-items: center;
 
-  .navbar{
+  .navbar {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
@@ -21,14 +53,14 @@ header{
   }
 }
 
-.hero{
+.hero {
   width: 100%;
-  height: calc(75vh - 7rem);
+  min-height: calc(75vh - 7rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  .content{
+  .content {
     max-width: 1180px;
     width: 100%;
     margin: 0 auto;
@@ -37,19 +69,151 @@ header{
     align-items: center;
     gap: 1rem;
 
-    .text-left, .image{
+    .text-left,
+    .image {
       width: 50%;
     }
   }
 }
 
-.welcome-screen{
-  position: absolute;
+.about-me {
+  width: 100%;
+  max-width: 1280px;
+  margin: 10rem auto 1rem;
+  padding-top: 5rem;
+
+  .wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: 3px solid transparent;
+    transition: .4s;
+    border-radius: .5rem;
+
+    &:hover{
+      transform: translateY(-10px)!important;
+      border: 3px solid $primary-color;
+    }
+  }
+
+  .content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+
+    h5 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .image {
+    flex: 2;
+
+    img {
+      display: inline-block;
+      width: 100%;
+      height: 20rem;
+      background: #ccc;
+    }
+  }
+}
+
+.works {
+  max-width: 1280px;
+  margin: 10rem auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  > .content{
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  .work-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+  }
+
+  h2 {
+    max-width: 500px;
+    position: relative;
+    color: #fff;
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 30%;
+      position: absolute;
+      bottom: 10%;
+      left: 0;
+      z-index: -1;
+      background-color: $primary-color;
+    }
+
+    &::after {
+      content: 'Selected Works';
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      clip-path: polygon(0 0, 100% 0, 100% 61%, 0 61%);
+      color: $primary-color;
+    }
+  }
+}
+
+section.contact-me{
+  max-width: 1280px;
+  margin: 10rem auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  > .content{
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  h2 {
+    max-width: 500px;
+    position: relative;
+    color: #fff;
+
+    &::before {
+      content: '';
+      width: 30%;
+      height: 100%;
+      position: absolute;
+      bottom: 10%;
+      right: 0;
+      z-index: -1;
+      background-color: $primary-color;
+    }
+
+    &::after {
+      content: 'Contact';
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      // clip-path: polygon(0 0, 100% 0, 100% 61%, 0 61%);
+      color: $primary-color;
+    }
+  }
+}
+
+.welcome-screen {
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 999;
+  z-index: 9999;
   width: 100vw;
   height: 100vh;
 
@@ -58,17 +222,18 @@ header{
   justify-content: center;
 
   background: $secondary-color;
-  // animation: hideWelcomeScreen 1.2s ease-out;
 
   transition: .7s;
-  h1{
+
+  h1 {
     color: #fff;
   }
 }
 
-.image {
+.hero .image {
   margin-top: 2rem;
-    img{
+
+  img {
     max-width: 500px;
     display: block;
     background-color: #ccc;
@@ -76,20 +241,24 @@ header{
 }
 
 @media(max-width: 1080px) {
-  main, header{
+
+  main,
+  header {
     padding: 0 1rem;
   }
 
-  .hero{
+  .hero {
     align-items: flex-start;
-    .content{
+
+    .content {
       flex-direction: column;
 
-      .text-left, .image{
+      .text-left,
+      .image {
         width: 100%;
       }
 
-      .text-left{
+      .text-left {
         padding: 0 3rem;
         margin-top: 5rem;
       }

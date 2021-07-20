@@ -9,7 +9,6 @@ section.lines{
 }
 
 .line{
-  // display: block;
   width: 1px;
   height: 250px;
   position: absolute;
@@ -61,6 +60,10 @@ section.lines{
   height: 1px;
   animation: lineXAnimationToLeft 5s ease;
   left: 20%;
+}
+
+.line-1, .line-2, .line-3, .line-4, .line-5, .line-6, .line-7{
+  animation-delay: 2000ms;
 }
 
 
