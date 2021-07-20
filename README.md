@@ -39,7 +39,7 @@ Um site para mostrar meu trabalho.
 
 - Clone o repositório
 - Abra o `index.html` em um navegador, ou
-- [Veja funcionando aqui]()
+- [Veja funcionando aqui](https://andraderafa72.github.io/portfolio/)
 
 <br>
 
