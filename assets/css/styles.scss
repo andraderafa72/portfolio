@@ -1,5 +1,7 @@
 @import './partials/_colors';
 @import './partials/_layout';
+@import './partials/_lines';
+@import './partials/_animations';
 
 *{
   margin: 0;
@@ -109,7 +111,7 @@ button.contact-me{
     &::before{
       position: absolute;
       content: '';
-      width: 4px;
+      width: 3px;
       height: 0;
       left: calc(50% - 2px);
       top: -3.5rem;
@@ -154,17 +156,35 @@ span.logo{
   }
 
   &::before{
-    top: -5%;
-    left: -4%;
+    top: -3%;
+    left: -3%;
     background-color: $primary-color;
     box-shadow: 0px 16px 64px 0px rgba(94, 33, 41, 0.35);
   }
   &::after{
-    bottom: -5%;
-    right: -4%;
+    bottom: -3%;
+    right: -3%;
     border: 2px solid $primary-color;
     background: transparent;
   }
+}
+
+.hidden-animation{
+  animation: hideWelcomeScreen .7s ease;
+}
+
+.hidden{
+  display: none;
+}
+
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.tracking-out-contract {
+	-webkit-animation: tracking-out-contract 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: tracking-out-contract 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 @media(min-width: 1280px) {

@@ -1,0 +1,123 @@
+section.lines{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.line{
+  // display: block;
+  width: 1px;
+  height: 250px;
+  position: absolute;
+  background: $left-gradient;
+}
+
+.line-1{
+  left: 16rem;
+  height: 450px;
+  animation: lineYAnimationToTop 5s ease;
+  bottom: calc(100% - 300px);
+}
+
+.line-2{
+  top: 12.5rem;
+  right: -100px;
+  height: 1px;
+  width: 400px;
+  animation: lineXAnimationLeft 5s ease;
+}
+
+.line-3{
+  right: 10rem;
+  height: 600px;
+  transform: rotate(180deg);
+  animation: lineYAnimationBottom 5s ease;
+  bottom: 25%;
+
+}
+
+.line-4{
+  bottom: 35%;
+  height: 1px;
+  width: 450px;
+  animation: lineXAnimationRight 5s ease;
+  right: calc(100% - 250px);
+}
+
+.line-6{
+  left: 50%;
+  height: 350px;
+  animation: lineYAnimationToBottom 5s ease;
+  top: calc(100% - 200px);
+}
+
+.line-7{
+  bottom: 10rem;
+  width: 650px;
+  height: 1px;
+  animation: lineXAnimationToLeft 5s ease;
+  left: 20%;
+}
+
+
+@keyframes lineYAnimationToTop{
+  0%{
+    bottom: -250px;
+  }
+  100%{
+    bottom: calc(100% - 300px);
+  }
+}
+
+@keyframes lineYAnimationToBottom{
+  0%{
+    top: -250px;
+  }
+  100%{
+    top: calc(100% - 200px);
+  }
+}
+
+@keyframes lineYAnimationBottom{
+  0%{
+    bottom: -250px;
+  }
+  100%{
+    bottom: 25%;
+  }
+}
+@keyframes lineXAnimationLeft{
+  0%{
+    left: -250px;
+  }
+  100%{
+    left: calc(100% - 300px);
+  }
+}
+@keyframes lineXAnimationToLeft{
+  0%{
+    left: -400px;
+  }
+  100%{
+    left: 20%;
+  }
+}
+
+@keyframes lineXAnimationRight{
+  0%{
+    right: -250px;
+  }
+  100%{
+    right: calc(100% - 250px);
+  }
+}
+
+@media(max-width: 1080px) {
+  .line{
+    display: none;
+  }
+}

@@ -14,7 +14,7 @@ header{
 
   .navbar{
     width: 100%;
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -23,22 +23,46 @@ header{
 
 .hero{
   width: 100%;
-  height: calc(100vh - 7rem);
+  height: calc(75vh - 7rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   .content{
-    max-width: 1280px;
+    max-width: 1180px;
     width: 100%;
-    margin: 0 auto 10rem;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 
     .text-left, .image{
       width: 50%;
     }
+  }
+}
+
+.welcome-screen{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: $secondary-color;
+  // animation: hideWelcomeScreen 1.2s ease-out;
+
+  transition: .7s;
+  h1{
+    color: #fff;
   }
 }
 
@@ -66,6 +90,7 @@ header{
       }
 
       .text-left{
+        padding: 0 3rem;
         margin-top: 5rem;
       }
     }
