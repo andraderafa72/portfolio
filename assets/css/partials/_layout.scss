@@ -7,32 +7,32 @@ main {
   padding: 0 3rem;
 }
 
-footer{
+footer {
   background: $secondary-color;
   height: 15rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   color: #fff;
 
-  span{
+  span {
     width: 100%;
     display: inline-block;
     text-align: center;
     margin: 1rem 0 2rem;
   }
 
-  ul li a{
+  ul li a {
     color: $subtitle;
 
-    &:hover{
+    &:hover {
       color: #fff;
     }
   }
 
-  i{
+  i {
     text-align: center;
     width: 100%;
   }
@@ -82,7 +82,7 @@ header {
   margin: 10rem auto 1rem;
   padding-top: 5rem;
 
-  .wrapper{
+  .wrapper {
     position: relative;
     display: flex;
     align-items: center;
@@ -92,8 +92,8 @@ header {
     transition: .4s;
     border-radius: .5rem;
 
-    &:hover{
-      transform: translateY(-10px)!important;
+    &:hover {
+      transform: translateY(-10px) !important;
       border: 3px solid $primary-color;
     }
   }
@@ -127,15 +127,15 @@ header {
   display: flex;
   flex-wrap: wrap;
 
-  > .content{
+  >.content {
     width: 100%;
     margin-top: 3rem;
   }
 
-  .work-cards{
+  .work-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content: space-between;
   }
 
   h2 {
@@ -167,43 +167,54 @@ header {
   }
 }
 
-section.contact-me{
+section.contact-me {
   max-width: 1280px;
-  margin: 10rem auto;
+  margin: 0 auto 15rem;
+  padding-top: 7.5rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
-  > .content{
-    width: 100%;
+  >.content {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
     margin-top: 3rem;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
+      path {
+        transition: .4s;
+        fill: $primary-color;
+      }
+    }
+
+    a {
+      transition: .4s;
+      display: flex;
+      align-items: center;
+      color: $primary-color;
+      font-weight: 500;
+      font-size: 1.5rem;
+
+      &:hover{
+        color: $secondary-color;
+
+        svg path{
+          fill: $secondary-color;
+        }
+      }
+    }
   }
 
   h2 {
+    width: 40%;
     max-width: 500px;
     position: relative;
-    color: #fff;
-
-    &::before {
-      content: '';
-      width: 30%;
-      height: 100%;
-      position: absolute;
-      bottom: 10%;
-      right: 0;
-      z-index: -1;
-      background-color: $primary-color;
-    }
-
-    &::after {
-      content: 'Contact';
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 999;
-      // clip-path: polygon(0 0, 100% 0, 100% 61%, 0 61%);
-      color: $primary-color;
-    }
+    font-size: 6rem;
   }
 }
 

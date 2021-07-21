@@ -222,44 +222,69 @@ header .navbar {
 
 section.contact-me {
   max-width: 1280px;
-  margin: 10rem auto;
+  margin: 0 auto 15rem;
+  padding-top: 7.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 section.contact-me > .content {
-  width: 100%;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
   margin-top: 3rem;
 }
 
+section.contact-me > .content svg {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+section.contact-me > .content svg path {
+  -webkit-transition: .4s;
+  transition: .4s;
+  fill: #5E2129;
+}
+
+section.contact-me > .content a {
+  -webkit-transition: .4s;
+  transition: .4s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #5E2129;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+section.contact-me > .content a:hover {
+  color: #3E3533;
+}
+
+section.contact-me > .content a:hover svg path {
+  fill: #3E3533;
+}
+
 section.contact-me h2 {
+  width: 40%;
   max-width: 500px;
   position: relative;
-  color: #fff;
-}
-
-section.contact-me h2::before {
-  content: '';
-  width: 30%;
-  height: 100%;
-  position: absolute;
-  bottom: 10%;
-  right: 0;
-  z-index: -1;
-  background-color: #5E2129;
-}
-
-section.contact-me h2::after {
-  content: 'Contact';
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  color: #5E2129;
+  font-size: 6rem;
 }
 
 .welcome-screen {
@@ -595,6 +620,10 @@ section.lines {
   transition: .4s;
 }
 
+.card:nth-child(3) + .card, .card:nth-child(4) + .card {
+  margin-top: 2rem;
+}
+
 .card .content {
   width: 100%;
   display: -webkit-box;
@@ -792,7 +821,16 @@ button {
   font-size: 1.125rem;
 }
 
-button.contact-me {
+a.contact-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 2rem;
   background: transparent;
   border: 2px solid #5E2129;
@@ -801,9 +839,11 @@ button.contact-me {
   width: 40%;
   -webkit-transition: .4s;
   transition: .4s;
+  font-weight: 500;
+  color: #5E2129;
 }
 
-button.contact-me:hover {
+a.contact-me:hover {
   color: #fff;
   background: #5E2129;
 }
@@ -826,19 +866,30 @@ button.contact-me:hover {
 .social-media a {
   background-color: #3E3533;
   border-radius: 100%;
-  width: 3rem;
-  height: 3rem;
+  padding: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.social-media a img {
+.social-media a svg {
   width: 2rem;
   height: 2rem;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.social-media a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
 }
 
 .navbar ul li a {

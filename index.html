@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Poppins:wght@500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <script src="assets/js/svg-inject.min.js"></script>
 </head>
 <body>
   <div class="welcome-screen">
@@ -19,9 +21,9 @@
   </div>
 
   <div class="social-media">
-    <a target="_blank" href="https://wa.me/5584988181526">WhatsApp</a>
-    <a target="_blank" href="https://linkedin.com/in/andraderafa72">LinkedIn</a>
-    <a target="_blank" href="https://github.com/andraderafa72">GitHub</a>
+    <a target="_blank" href="https://wa.me/5584988181526"><img src="assets/img/whatsapp.svg" alt="" onload="SVGInject(this)"></a>
+    <a target="_blank" href="https://linkedin.com/in/andraderafa72"><img src="assets/img/linkedin.svg" alt="" onload="SVGInject(this)"></a>
+    <a target="_blank" href="https://github.com/andraderafa72"><img src="assets/img/github.svg" alt="" onload="SVGInject(this)"></a>
   </div>
 
   <header id="home">
@@ -35,7 +37,7 @@
 
       <ul>
         <li><a href="#works">Works</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="#lets-connect">Let's connect</a></li>
       </ul>
     </section>
   </header>
@@ -58,7 +60,7 @@
           <h3>Welcome 👋</h3>
           <h1>I'm Rafael,</h1>
           <h4>a junior front-end developer passionate about creating interfaces and systems.</h4>
-          <button type="button" class="contact-me">Contact me</button>
+          <a href="#lets-connect" class="contact-me">Let's connect</a>
         </div>
         <div class="image">
           <img src="" class="me-image" alt="Esse sou eu.">
@@ -84,7 +86,12 @@
     </section>
 
     <section class="works" id="works">
-      <h2>Selected Works</h2>
+      <h2
+        class="wrapper"
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-once="false"
+      >Selected Works</h2>
       <div class="content">
         <section class="work-cards">
           <div class="card">
@@ -103,7 +110,7 @@
                 <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=ReactJS&color=%231545B6&style=for-the-badge&logo=react&logoColor=whitesmoke" alt="ReactJS"></a>
               </div>
               <div class="buttons">
-                <a target="_blank" href="">See it working</a>
+                <a target="_blank" href="https://rmmoney.netlify.app">See it working</a>
                 <a target="_blank" href="https://github.com/andraderafa72/dtmoney">See on GitHub</a>
               </div>
             </div>
@@ -125,7 +132,28 @@
                 <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=ReactJS&color=%231545B6&style=for-the-badge&logo=react&logoColor=whitesmoke" alt="ReactJS"></a>
               </div>
               <div class="buttons">
-                <a target="_blank" href="">See it working</a>
+                <a target="_blank" href="https://git-rocket.netlify.app">See it working</a>
+                <a target="_blank" href="https://github.com/andraderafa72/github-explorer">See on GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <h5>To.do</h5>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. V
+                eritatis doloremque perferendis qui eligendi exercitationem facilis
+                earum aliquid. Maiores voluptatibus quae tempore nulla
+                 fugiat, earum deserunt, provident vel quidem asperiores quasi.</p>
+
+              <div class="language-cards">
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=HTML5&color=%23E34F26&style=for-the-badge&logo=html5&logoColor=whitesmoke" alt="HTML5"></a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=CSS3&color=%231572B6&style=for-the-badge&logo=css3&logoColor=whitesmoke" alt="CSS3"></a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=SASS&color=%23CC6699&style=for-the-badge&logo=sass&logoColor=whitesmoke" alt="SASS"></a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=Typescript&color=%231570B6&style=for-the-badge&logo=typescript&logoColor=whitesmoke" alt="Typescript"> </a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=ReactJS&color=%231545B6&style=for-the-badge&logo=react&logoColor=whitesmoke" alt="ReactJS"></a>
+              </div>
+              <div class="buttons">
+                <a target="_blank" href="https://todo-ignite.netlify.app">See it working</a>
                 <a target="_blank" href="https://github.com/andraderafa72/github-explorer">See on GitHub</a>
               </div>
             </div>
@@ -148,20 +176,57 @@
               </div>
 
               <div class="buttons">
-                <a target="_blank" href="">See it working</a>
+                <a target="_blank" href="https://letmeask-68aa3.web.app">See it working</a>
                 <a target="_blank" href="https://github.com/andraderafa72/letmeask">See on GitHub</a>
               </div>
             </div>
+          </div>
+
+          <div class="card">
+            <div class="content">
+              <h5>Mais um projeto saindo do forno</h5>
+              <p>Assim que finalizado, postarei aqui!</p>
+              <!-- <div class="language-cards">
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=HTML5&color=%23E34F26&style=for-the-badge&logo=html5&logoColor=whitesmoke" alt="HTML5"></a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=CSS3&color=%231572B6&style=for-the-badge&logo=css3&logoColor=whitesmoke" alt="CSS3"></a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=SASS&color=%23CC6699&style=for-the-badge&logo=sass&logoColor=whitesmoke" alt="SASS"></a>
+                <a href="https://"><img src="https://img.shields.io/static/v1?label=&message=Typescript&color=%231570B6&style=for-the-badge&logo=typescript&logoColor=whitesmoke" alt="Typescript"> </a>
+                <a href="https://pt-br.reactjs.org/"><img src="https://img.shields.io/static/v1?label=&message=ReactJS&color=%231545B6&style=for-the-badge&logo=react&logoColor=whitesmoke" alt="ReactJS"></a>
+                <a href="https://nextjs.org/"><img src="https://img.shields.io/static/v1?label=&message=Next.JS&color=black&style=for-the-badge&logo=next.js&logoColor=whitesmoke" alt="Next.JS"></a>
+              </div>
+
+              <div class="buttons">
+                <a target="_blank" href="https://letmeask-68aa3.web.app">See it working</a>
+                <a target="_blank" href="https://github.com/andraderafa72/letmeask">See on GitHub</a>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="card" style="background: transparent; box-shadow: none; border: 0;">
           </div>
 
         </section>
       </div>
     </section>
 
-    <section class="contact-me">
-      <h2>Contact Me</h2>
+    <section class="contact-me" id="lets-connect">
+      <h2
+        class="wrapper"
+        data-aos="fade-up"
+        data-aos-duration="600"
+        data-aos-once="false"
+      >Let's Connect</h2>
 
-      <div class="content"></div>
+      <div
+        class="content"
+        data-aos="fade-left"
+        data-aos-duration="600"
+        data-aos-once="false"
+      >
+        <a target="_blank" href="https://wa.me/5584988181526"><img src="assets/img/whatsapp.svg" alt="" onload="SVGInject(this)"> WhatsApp</a>
+        <a target="_blank" href="https://linkedin.com/in/andraderafa72"><img src="assets/img/linkedin.svg" alt="" onload="SVGInject(this)"> LinkedIn</a>
+        <a target="_blank" href="https://github.com/andraderafa72"><img src="assets/img/github.svg" alt="" onload="SVGInject(this)"> GitHub</a>
+      </div>
     </section>
   </main>
 
@@ -172,7 +237,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about-me">About</a></li>
         <li><a href="#works">Works</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="#lets-connect">Let's Connect</a></li>
       </ul>
     </section>
 

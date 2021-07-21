@@ -1,17 +1,23 @@
 // WELCOME ANIMATION
+const whenLoadPage = 1900
+const whenFinishLoadAnimation = whenLoadPage + 700
+const whenFinishWelcomeAnimation = whenFinishLoadAnimation + 700
+
 setTimeout(() => {
   const welcomeTitle = document.querySelector('.welcome-screen h1');
   welcomeTitle.classList.remove('tracking-in-expand')
   welcomeTitle.classList.add('tracking-out-contract')
-  setTimeout(() => {
-    const welcomeScreen = document.querySelector('.welcome-screen');
-    welcomeScreen.classList.add('hidden-animation')
-    setTimeout(() => {
-      const welcomeScreen = document.querySelector('.welcome-screen');
-      welcomeScreen.classList.add('hidden')
-    }, 700)
-  }, 700)
-}, 1900)
+}, whenLoadPage);
+
+setTimeout(() => {
+  const welcomeScreen = document.querySelector('.welcome-screen');
+  welcomeScreen.classList.add('hidden-animation')
+}, whenFinishLoadAnimation);
+
+setTimeout(() => {
+  const welcomeScreen = document.querySelector('.welcome-screen');
+  welcomeScreen.classList.add('hidden')
+}, whenFinishWelcomeAnimation);
 
 // CARD ANIMATIONS AND PREVENT SUBMIT ON CARDS
 const languageCards = document.querySelectorAll('.language-cards');
@@ -26,7 +32,8 @@ cards.forEach(el => {
 
 languageCards.addEventListener('click', e => e.preventDefault())
 
-window.addEventListener("scroll", (event) => {
-  let scroll = this.scrollY;
-  console.log(scroll)
-});
+// window.addEventListener("scroll", (event) => {
+//   let scroll = this.scrollY;
+//   console.log(scroll)
+// });
+
