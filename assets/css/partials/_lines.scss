@@ -16,14 +16,14 @@ section.lines{
 }
 
 .line-1{
-  left: 16rem;
+  left: 12.5%;
   height: 450px;
   animation: lineYAnimationToTop 5s ease;
   bottom: calc(100% - 300px);
 }
 
 .line-2{
-  top: 12.5rem;
+  top: 20%;
   right: -100px;
   height: 1px;
   width: 400px;
@@ -31,7 +31,7 @@ section.lines{
 }
 
 .line-3{
-  right: 10rem;
+  right: 8%;
   height: 600px;
   transform: rotate(180deg);
   animation: lineYAnimationBottom 5s ease;
@@ -40,7 +40,7 @@ section.lines{
 }
 
 .line-4{
-  bottom: 35%;
+  bottom: 30%;
   height: 1px;
   width: 450px;
   animation: lineXAnimationRight 5s ease;
@@ -55,7 +55,7 @@ section.lines{
 }
 
 .line-7{
-  bottom: 10rem;
+  bottom: 15%;
   width: 650px;
   height: 1px;
   animation: lineXAnimationToLeft 5s ease;
@@ -119,6 +119,17 @@ section.lines{
   }
 }
 
+@media(max-width: 1440px) {
+  .line-1{
+    left: 5%;
+  }
+  .line-2{
+    width: 300px;
+  }
+  .line-3{
+    height: 500px;
+  }
+}
 @media(max-width: 1080px) {
   .line{
     display: none;

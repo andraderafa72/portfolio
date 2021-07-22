@@ -156,18 +156,23 @@ a.contact-me {
   bottom: 1rem;
   right: 1rem;
   display: flex;
-  gap: 1rem;
-  z-index: -1;
+  align-items: center;
+  z-index: 1;
 
   a{
     background-color: $secondary-color;
-    border-radius: 100%;
-    // width: 3rem;
-    // height: 3rem;
-    padding: 0.5rem;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    span{
+      margin-left: 0.5rem;
+      letter-spacing: 0;
+      font-weight: 400;
+      color: #FFF;
+    }
 
     svg{
       width: 2rem;
@@ -176,8 +181,8 @@ a.contact-me {
     }
 
     &:hover{
-      transform: scale(1.05);
-      filter: brightness(.9);
+      background: $primary-color;
+
     }
   }
 

@@ -20,7 +20,7 @@ setTimeout(() => {
 }, whenFinishWelcomeAnimation);
 
 // CARD ANIMATIONS AND PREVENT SUBMIT ON CARDS
-const languageCards = document.querySelectorAll('.language-cards');
+const languageCards = document.querySelectorAll('.language-cards a');
 const cards = document.querySelectorAll('.card');
 
 cards.forEach(el => {
@@ -30,10 +30,13 @@ cards.forEach(el => {
   el.setAttribute('data-aos-once', 'false')
 })
 
-languageCards.addEventListener('click', e => e.preventDefault())
-
-// window.addEventListener("scroll", (event) => {
-//   let scroll = this.scrollY;
-//   console.log(scroll)
-// });
-
+window.addEventListener("scroll", (event) => {
+  let scroll = this.scrollY;
+  console.log(scroll)
+  const wppButton = document.querySelector('.social-media');
+  if(scroll >= 1600){
+    wppButton.classList.add('hidden')
+  } else {
+    wppButton.classList.remove('hidden')
+  }
+});

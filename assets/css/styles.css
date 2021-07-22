@@ -464,7 +464,7 @@ section.lines {
 }
 
 .line-1 {
-  left: 16rem;
+  left: 12.5%;
   height: 450px;
   -webkit-animation: lineYAnimationToTop 5s ease;
           animation: lineYAnimationToTop 5s ease;
@@ -472,7 +472,7 @@ section.lines {
 }
 
 .line-2 {
-  top: 12.5rem;
+  top: 20%;
   right: -100px;
   height: 1px;
   width: 400px;
@@ -481,7 +481,7 @@ section.lines {
 }
 
 .line-3 {
-  right: 10rem;
+  right: 8%;
   height: 600px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -491,7 +491,7 @@ section.lines {
 }
 
 .line-4 {
-  bottom: 35%;
+  bottom: 30%;
   height: 1px;
   width: 450px;
   -webkit-animation: lineXAnimationRight 5s ease;
@@ -508,7 +508,7 @@ section.lines {
 }
 
 .line-7 {
-  bottom: 10rem;
+  bottom: 15%;
   width: 650px;
   height: 1px;
   -webkit-animation: lineXAnimationToLeft 5s ease;
@@ -626,6 +626,18 @@ section.lines {
   }
   100% {
     right: calc(100% - 250px);
+  }
+}
+
+@media (max-width: 1440px) {
+  .line-1 {
+    left: 5%;
+  }
+  .line-2 {
+    width: 300px;
+  }
+  .line-3 {
+    height: 500px;
   }
 }
 
@@ -752,6 +764,7 @@ section.lines {
 }
 
 .card .language-cards a {
+  cursor: default;
   padding: 0;
 }
 
@@ -964,14 +977,16 @@ a.contact-me:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
-  z-index: -1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
 }
 
 .social-media a {
   background-color: #3E3533;
-  border-radius: 100%;
-  padding: 0.5rem;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -983,6 +998,13 @@ a.contact-me:hover {
           justify-content: center;
 }
 
+.social-media a span {
+  margin-left: 0.5rem;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: #FFF;
+}
+
 .social-media a svg {
   width: 2rem;
   height: 2rem;
@@ -991,10 +1013,7 @@ a.contact-me:hover {
 }
 
 .social-media a:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-filter: brightness(0.9);
-          filter: brightness(0.9);
+  background: #5E2129;
 }
 
 .navbar ul li a {
