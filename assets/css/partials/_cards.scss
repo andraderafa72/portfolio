@@ -10,14 +10,10 @@
 
   display: flex;
   transition: .4s;
-
-  &:nth-child(3) + .card, &:nth-child(4) + .card{
-    margin-top: 2rem;
-  }
+  margin-top: 2rem;
 
   .content{
     width:100%;
-    // padding: 2rem 1rem 0;
     display: flex;
     flex-direction: column;
 
@@ -64,8 +60,16 @@
 
 @media (max-width: 1080px) {
   .card{
-    .content{
-      padding: 0 0 0 2rem;
-    }
+    width: calc(50% - .5rem);
+  }
+}
+@media (max-width: 768px) {
+  .card{
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  .card{
+    padding: 1.5rem;
   }
 }

@@ -157,6 +157,7 @@ a.contact-me {
   right: 1rem;
   display: flex;
   gap: 1rem;
+  z-index: -1;
 
   a{
     background-color: $secondary-color;
@@ -306,4 +307,5 @@ footer span.logo{
     font-weight: 300;
     font-size: 1.2rem;
   }
+  a.contact-me{ width:100%}
 }
