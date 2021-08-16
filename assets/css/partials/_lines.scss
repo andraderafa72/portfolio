@@ -9,6 +9,7 @@ section.lines{
 }
 
 .line{
+  opacity: .5;
   width: 1px;
   height: 250px;
   position: absolute;
@@ -121,13 +122,18 @@ section.lines{
 
 @media(max-width: 1440px) {
   .line-1{
-    left: 5%;
+    left: 2%;
   }
   .line-2{
     width: 300px;
   }
   .line-3{
+    right: 3%;
     height: 500px;
+  }
+
+  .line-4{
+    // bottom: 20%;
   }
 }
 @media(max-width: 1080px) {
