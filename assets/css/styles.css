@@ -366,7 +366,7 @@ section.contact-me h2 {
   padding: 2rem;
   background: #ffffff;
   border-radius: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 3rem;
   -webkit-box-shadow: 0px 8px 32px 0px rgba(12, 12, 12, 0.05);
           box-shadow: 0px 8px 32px 0px rgba(12, 12, 12, 0.05);
   display: -webkit-box;
@@ -565,6 +565,42 @@ section.contact-me h2 {
 .freela-display .display-wrapper .secondary-job {
   width: calc(50% - 0.75rem);
   height: 450px;
+}
+
+.comments {
+  margin-top: 2rem;
+}
+
+.comments .comment-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.comments > span {
+  margin-top: 2rem;
+  color: #636363;
+  font-size: .9rem;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.comments > span a {
+  padding: 0;
+}
+
+.stars {
+  color: #000;
+  margin-left: auto;
+}
+
+.stars img {
+  width: 1rem;
+  height: 1rem;
 }
 
 @media (max-width: 1080px) {
@@ -844,6 +880,50 @@ section.contact-me h2 {
   -webkit-transform: translateY(-10px) !important;
           transform: translateY(-10px) !important;
   border: 3px solid #5E2129;
+}
+
+.comment {
+  width: calc(33% - .75rem);
+  min-width: 400px;
+  background: #FFf;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.comment header, .comment main {
+  width: 100%;
+  padding: 0;
+}
+
+.comment header {
+  max-height: 60px;
+  margin-bottom: 1rem;
+}
+
+.comment p {
+  text-align: left;
+  font-size: .9rem;
+}
+
+.comment .image-wrapper {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background: #eee;
+  margin-right: .5rem;
 }
 
 @media (max-width: 1080px) {

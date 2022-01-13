@@ -287,7 +287,7 @@ section.contact-me {
     padding: 2rem;
     background: #ffffff;
     border-radius: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 3rem;
     box-shadow: 0px 8px 32px 0px rgba(12, 12, 12, 0.05);
 
     display: flex;
@@ -444,6 +444,37 @@ section.contact-me {
       width: calc(50% - 0.75rem);
       height: 450px;
     }
+  }
+}
+
+.comments{
+  margin-top: 2rem;
+
+  .comment-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  > span{
+    margin-top: 2rem;
+    color: rgb(99, 99, 99);
+    font-size: .9rem;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    a{
+      padding: 0;
+    }
+  }
+}
+
+.stars{
+  color: #000;
+  margin-left: auto;
+  img{
+    width: 1rem;
+    height: 1rem;
   }
 }
 
