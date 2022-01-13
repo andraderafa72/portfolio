@@ -57,6 +57,9 @@
       padding: 1rem 0 0;
       color: $primary-color;
       font-weight: 500;
+      &:hover{
+        filter: brightness(.9);
+      }
     }
   }
 

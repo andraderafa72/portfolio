@@ -104,6 +104,16 @@ header .navbar {
   width: 50%;
 }
 
+.hero .image {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.hero .image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .about-me {
   width: 100%;
   max-width: 1280px;
@@ -126,9 +136,9 @@ header .navbar {
           justify-content: space-between;
   background-color: white;
   border: 3px solid transparent;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: .5rem;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 0.5rem;
 }
 
 .about-me .wrapper:hover {
@@ -155,7 +165,7 @@ header .navbar {
   font-size: 1.1rem;
   text-align: justify;
   line-height: 160%;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: 400;
   color: #454545;
 }
@@ -211,7 +221,7 @@ header .navbar {
 }
 
 .works h2::before {
-  content: '';
+  content: "";
   width: 100%;
   height: 30%;
   position: absolute;
@@ -222,7 +232,7 @@ header .navbar {
 }
 
 .works h2::after {
-  content: 'Selected Works';
+  content: "Selected Works";
   width: 100%;
   position: absolute;
   top: 0;
@@ -269,14 +279,14 @@ section.contact-me > .content svg {
 }
 
 section.contact-me > .content svg path {
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   fill: #5E2129;
 }
 
 section.contact-me > .content a {
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,8 +332,8 @@ section.contact-me h2 {
       -ms-flex-pack: center;
           justify-content: center;
   background: #3E3533;
-  -webkit-transition: .7s;
-  transition: .7s;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
 .welcome-screen h1 {
@@ -339,6 +349,154 @@ section.contact-me h2 {
   display: block;
   max-width: 500px;
   width: 100%;
+}
+
+.freela-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1280px;
+  margin: 10rem auto 20rem;
+}
+
+.freela-display h2,
+.freela-display .display-wrapper {
+  width: 100%;
+}
+
+.freela-display h2 {
+  margin-bottom: 5rem;
+}
+
+.freela-display .display-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.freela-display .display-wrapper .main-job,
+.freela-display .display-wrapper .secondary-job {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  overflow: hidden;
+  -webkit-transition: 0.2s !important;
+  transition: 0.2s !important;
+}
+
+.freela-display .display-wrapper .main-job.konectados,
+.freela-display .display-wrapper .secondary-job.konectados {
+  background-image: url("/assets/img/konectados-app.png");
+}
+
+.freela-display .display-wrapper .main-job.catalogo,
+.freela-display .display-wrapper .secondary-job.catalogo {
+  background-image: url("/assets/img/catalogo.png");
+}
+
+.freela-display .display-wrapper .main-job.assinatura,
+.freela-display .display-wrapper .secondary-job.assinatura {
+  background-image: url("/assets/img/assinatura.png");
+}
+
+.freela-display .display-wrapper .main-job .content,
+.freela-display .display-wrapper .secondary-job .content {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.freela-display .display-wrapper .main-job .content h3,
+.freela-display .display-wrapper .secondary-job .content h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.freela-display .display-wrapper .main-job .content p,
+.freela-display .display-wrapper .secondary-job .content p {
+  font-size: .9rem;
+  font-weight: normal;
+  opacity: .9;
+  text-align: justify;
+}
+
+.freela-display .display-wrapper .main-job .content h3,
+.freela-display .display-wrapper .main-job .content p,
+.freela-display .display-wrapper .secondary-job .content h3,
+.freela-display .display-wrapper .secondary-job .content p {
+  width: 100%;
+  color: #fff;
+  font-family: "Poppins";
+}
+
+.freela-display .display-wrapper .main-job .content .languages,
+.freela-display .display-wrapper .secondary-job .content .languages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5rem;
+}
+
+.freela-display .display-wrapper .main-job:hover .content,
+.freela-display .display-wrapper .secondary-job:hover .content {
+  opacity: 0;
+}
+
+.freela-display .display-wrapper .main-job {
+  height: 600px;
+}
+
+.freela-display .display-wrapper .main-job .content {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.freela-display .display-wrapper .main-job .content p, .freela-display .display-wrapper .main-job .content h3, .freela-display .display-wrapper .main-job .content .languages {
+  max-width: 600px;
+}
+
+.freela-display .display-wrapper .secondary-job:hover {
+  -webkit-transform: scale(1.25) translateY(15%) !important;
+          transform: scale(1.25) translateY(15%) !important;
+  background-size: cover;
+  height: 300px;
+  z-index: 9999;
+}
+
+.freela-display .display-wrapper .main-job {
+  width: 100%;
+}
+
+.freela-display .display-wrapper .secondary-job {
+  width: calc(50% - 0.75rem);
+  height: 450px;
 }
 
 @media (max-width: 1080px) {
@@ -447,7 +605,7 @@ section.contact-me h2 {
     font-weight: normal;
   }
   header .navbar ul li a {
-    padding: 0 .75rem;
+    padding: 0 0.75rem;
   }
   footer ul li {
     font-size: 1rem;
@@ -609,6 +767,11 @@ section.contact-me h2 {
   font-weight: 500;
 }
 
+.card .buttons a:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
 .card:hover {
   -webkit-transform: translateY(-10px) !important;
           transform: translateY(-10px) !important;
@@ -679,7 +842,7 @@ body,
 input,
 textarea,
 button {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
 }
 
