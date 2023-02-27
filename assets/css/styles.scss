@@ -295,6 +295,10 @@ footer span.logo{
 }
 
 @media(max-width: 1080px) {
+
+  html{
+    font-size: 87.5%;
+  }
   h3 {
     color: $subtitle;
     font-size: 1.5rem;

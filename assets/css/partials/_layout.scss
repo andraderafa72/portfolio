@@ -76,10 +76,10 @@ header {
     }
   }
 
-  .image{
+  .image {
     transform: scale(1.25);
 
-    img{
+    img {
       object-fit: contain;
     }
   }
@@ -92,19 +92,58 @@ header {
   padding-top: 5rem;
 
   .wrapper {
-    box-shadow: 0px 8px 32px 0px rgba(12, 12, 12, 0.05);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
-    border: 3px solid transparent;
-    transition: 0.4s;
-    border-radius: 0.5rem;
+    gap: 1rem;
 
-    &:hover {
-      transform: translateY(-10px) !important;
-      border: 3px solid $primary-color;
+    .image {
+      flex: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        border-radius: 100%;
+        z-index: 2;
+        
+      }
+      
+      &::before {
+        border: 2px dotted $primary-color;
+        top: -5%;
+        left: -5%;
+        width: 110%;
+        height: 110%;
+        opacity: .7;
+        animation: rotateRight 90s linear infinite;
+      }
+
+      &::after {
+        width: 105%;
+        top: -2.5%;
+        left: -2.5%;
+        height: 105%;
+        border: 2px dashed $primary-color;
+        opacity: .5;
+        animation: rotateLeft 80s linear infinite;
+        ;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+
+
+      }
     }
   }
 
@@ -112,7 +151,7 @@ header {
     padding: 2rem 4rem;
     display: flex;
     flex-direction: column;
-    flex: 3;
+    flex: 5;
 
     p {
       font-size: 1.1rem;
@@ -122,6 +161,7 @@ header {
       font-weight: 400;
       color: #454545;
     }
+
     h5 {
       color: $primary-color;
       font-size: 2rem;
@@ -140,13 +180,29 @@ header {
   }
 }
 
+.work-resume{
+  margin-bottom: 1rem!important;
+}
+
+.experience-list{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  // gap: .5rem;
+
+  .experience-arrow{
+    height: 4rem;
+    opacity: .3;
+  }
+}
+
 .works {
   max-width: 1280px;
   margin: 10rem auto;
   display: flex;
   flex-wrap: wrap;
 
-  > .content {
+  >.content {
     width: 100%;
     margin-top: 3rem;
   }
@@ -197,7 +253,7 @@ section.contact-me {
   background: $background;
   z-index: 9999;
 
-  > .content {
+  >.content {
     width: 60%;
     display: flex;
     justify-content: center;
@@ -282,7 +338,7 @@ section.contact-me {
   max-width: 1280px;
   margin: 10rem auto 20rem;
 
-  .contratar{
+  .contratar {
     width: 100%;
     padding: 2rem;
     background: #ffffff;
@@ -294,10 +350,10 @@ section.contact-me {
     align-items: center;
     justify-content: space-between;
 
-    > p{
+    >p {
       max-width: 60%;
 
-      a{
+      a {
         padding: 0;
         text-decoration: underline;
         color: $primary-color;
@@ -305,13 +361,13 @@ section.contact-me {
       }
     }
 
-    .counter{
+    .counter {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
 
-      p{
+      p {
         font-size: 2.5rem;
         color: $primary-color;
       }
@@ -326,11 +382,11 @@ section.contact-me {
   h2 {
     margin-bottom: 5rem;
 
-    span{
+    span {
       position: relative;
       color: #111;
 
-      &:after{
+      &:after {
         content: '';
         width: 100%;
         height: 8px;
@@ -357,7 +413,7 @@ section.contact-me {
       background-repeat: no-repeat;
       border-radius: 1rem;
       overflow: hidden;
-      transition: 0.2s!important;
+      transition: 0.2s !important;
 
       &.konectados {
         background-image: url("/assets/img/konectados-app.png");
@@ -419,9 +475,12 @@ section.contact-me {
     .main-job {
       height: 600px;
 
-      .content{
+      .content {
         align-items: center;
-        p, h3, .languages{
+
+        p,
+        h3,
+        .languages {
           max-width: 600px;
         }
       }
@@ -429,7 +488,7 @@ section.contact-me {
 
     .secondary-job {
       &:hover {
-        transform: scale(1.25) translateY(15%)!important;
+        transform: scale(1.25) translateY(15%) !important;
         background-size: cover;
         height: 300px;
         z-index: 9999;
@@ -447,38 +506,41 @@ section.contact-me {
   }
 }
 
-.comments{
+.comments {
   margin-top: 2rem;
 
-  .comment-wrapper{
+  .comment-wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
   }
 
-  > span{
+  >span {
     margin-top: 2rem;
     color: rgb(99, 99, 99);
     font-size: .9rem;
     display: inline-block;
     width: 100%;
     text-align: center;
-    a{
+
+    a {
       padding: 0;
     }
   }
 }
 
-.stars{
+.stars {
   color: #000;
   margin-left: auto;
-  img{
+
+  img {
     width: 1rem;
     height: 1rem;
   }
 }
 
 @media (max-width: 1080px) {
+
   main,
   header {
     padding: 0 1rem;
@@ -509,7 +571,7 @@ section.contact-me {
     align-items: center;
     justify-content: center;
 
-    > .content {
+    >.content {
       width: auto;
       flex-direction: column;
     }
@@ -582,7 +644,7 @@ section.contact-me {
       font-size: 1rem;
       margin-left: 0;
 
-      & + li {
+      &+li {
         margin-left: 0;
       }
 

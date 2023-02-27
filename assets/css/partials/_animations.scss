@@ -53,3 +53,15 @@
     opacity: 0;
   }
 }
+
+@keyframes rotateLeft {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateRight {
+  to {
+    transform: rotate(-360deg);
+  }
+}
