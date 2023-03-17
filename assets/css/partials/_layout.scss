@@ -416,15 +416,15 @@ section.contact-me {
       transition: 0.2s !important;
 
       &.konectados {
-        background-image: url("/assets/img/konectados-app.png");
+        background-image: url("assets/img/konectados-app.png");
       }
 
       &.catalogo {
-        background-image: url("/assets/img/catalogo.png");
+        background-image: url("assets/img/catalogo.png");
       }
 
       &.assinatura {
-        background-image: url("/assets/img/assinatura.png");
+        background-image: url("assets/img/assinatura.png");
       }
 
       .content {

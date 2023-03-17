@@ -363,15 +363,15 @@ section.contact-me h2 {
 }
 .freela-display .display-wrapper .main-job.konectados,
 .freela-display .display-wrapper .secondary-job.konectados {
-  background-image: url("/assets/img/konectados-app.png");
+  background-image: url("../img/konectados-app.png");
 }
 .freela-display .display-wrapper .main-job.catalogo,
 .freela-display .display-wrapper .secondary-job.catalogo {
-  background-image: url("/assets/img/catalogo.png");
+  background-image: url("../img/catalogo.png");
 }
 .freela-display .display-wrapper .main-job.assinatura,
 .freela-display .display-wrapper .secondary-job.assinatura {
-  background-image: url("/assets/img/assinatura.png");
+  background-image: url("../img/assinatura.png");
 }
 .freela-display .display-wrapper .main-job .content,
 .freela-display .display-wrapper .secondary-job .content {
